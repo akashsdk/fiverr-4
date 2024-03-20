@@ -55,12 +55,12 @@ export default function Footer() {
       </div>
       <div className="Footer-div">
         <p className="Footer-Box-text5">
-          Copyright © 2024 Plant Shop
+          Copyright &copy; {new Date().getFullYear()} Shop Name
           <br />
           All rights reserved
         </p>
 
-        <p className="Footer-Box-text6">Powered by Plant Shop</p>
+        <p className="Footer-Box-text6">Powered by Shop Name</p>
       </div>
     </div>
   );
