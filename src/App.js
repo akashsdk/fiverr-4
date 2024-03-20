@@ -6,6 +6,7 @@ import ErrorPage from "./Screen/ErrorPage";
 import AboutUs from "./Screen/AboutUs";
 import Shop from "./Screen/Shop";
 import Testimonials from "./Screen/Testimonials";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Testimonials" element={<Testimonials />} />
         </Routes>
+        <Footer/>
       </div>
     </BrowserRouter>
   );
