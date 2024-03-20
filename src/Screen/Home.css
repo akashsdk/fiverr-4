@@ -1,0 +1,15 @@
+.Home-body{
+    height: auto;
+    width: 100%;
+}
+
+.Home-Box1-Img{
+    height: 100vh;
+    width: 100%;
+    opacity: .9;
+}
+.Home-Box1-Div{
+    height: auto;
+    position: absolute;
+    
+}

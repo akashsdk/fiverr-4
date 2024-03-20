@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { FloatButton } from "antd";
 
 import Home from "./Screen/Home";
 import ErrorPage from "./Screen/ErrorPage";
@@ -16,11 +17,12 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/AboutUs" element={<AboutUs/>} />
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Testimonials" element={<Testimonials />} />
         </Routes>
-        <Footer/>
+        <Footer />
+        <FloatButton.BackTop visibilityHeight={0} />
       </div>
     </BrowserRouter>
   );
