@@ -1,8 +1,51 @@
-.Header-Body{
-    background-color: transparent;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Header-Body {
+  background-color: transparent;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(27, 180, 129);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.Header-box1 {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30px;
+}
+.Header-box2 {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+.Header-Link {
+  margin-left: 10px;
+}
+.Header-Text {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Segoe UI";
+}
+.Header-Icon {
+  font-size: 35px;
+}
+.Header-Icon-div {
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 7.5px;
+  margin-top: -50px;
+  margin-left: 30px;
+  background-color: rgb(27, 180, 129);
+  color: #fff;
+}
+.Header-Icon-Text {
+  font-size: 12px;
 }

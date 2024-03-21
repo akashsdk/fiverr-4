@@ -54,8 +54,9 @@
   margin-left: 10px;
   cursor: pointer;
   color: #fff;
-  border: 0.5px solid rgb(27, 180, 129);
+  border: 2px solid rgb(27, 180, 129);
   margin-top: 40px;
+  border-radius: 5px;
 }
 .Footer-Icon {
   font-size: 25px;
