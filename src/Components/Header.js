@@ -1,7 +1,11 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import {
+  ShoppingCartOutlined,
+  DownOutlined,
+  UpOutlined,
+} from "@ant-design/icons";
 
 export default function Header() {
   return (
@@ -16,9 +20,28 @@ export default function Header() {
         <Link to="/Home" className="Header-Link">
           <p className="Header-Text">Home</p>
         </Link>
-        <Link to="/Shop" className="Header-Link">
-          <p className="Header-Text">Shop</p>
-        </Link>
+        
+        <div className="dropdown">
+          <Link to="/Shop" className="Header-Link">
+            <p className="Header-Text">Shop</p>
+          </Link>
+          <DownOutlined className="headerBox-2-Icon" />
+          <UpOutlined className="headerBox-2-Icon2" />
+          <div className="dropdown-content">
+            <Link to="/team-augmentation" className="dropdown-content-Link">
+              <p className="dropdown-content-Text">Bonsai</p>
+            </Link>
+            <Link to="/project-development" className="dropdown-content-Link">
+              <p className="dropdown-content-Text">Cactus</p>
+            </Link>
+            <Link to="/mvp-services" className="dropdown-content-Link">
+              <p className="dropdown-content-Text"> Indoor Plants</p>
+            </Link>
+            <Link to="/offshore-development" className="dropdown-content-Link">
+              <p className="dropdown-content-Text">Succulent</p>
+            </Link>
+          </div>
+        </div>
         <Link to="AboutUs" className="Header-Link">
           <p className="Header-Text">About Us</p>
         </Link>
