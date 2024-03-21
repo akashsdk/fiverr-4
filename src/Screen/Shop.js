@@ -1,5 +1,6 @@
 import React from "react";
 import "./Shop.css";
+import { Link } from "react-router-dom";
 
 export default function Shop() {
   return (
@@ -12,34 +13,47 @@ export default function Shop() {
           </button>
         </div>
 
-        <p>Categories</p>
+        <p className="Shop-Left-Text">Categories</p>
 
-        <div>
-          <button>
-            <p>Bonsai</p>
-            <p>[4]</p>
+        <div className="Shop-Left-Div">
+          <button className="Shop-Left-Button">
+            <p className="Shop-Left-Text2">Bonsai</p>
+            <p className="Shop-Left-Text3">[4]</p>
           </button>
 
-          <button>
-            <p>Cactus</p>
-            <p>[4]</p>
+          <button className="Shop-Left-Button">
+            <p className="Shop-Left-Text2">Cactus</p>
+            <p className="Shop-Left-Text3">[4]</p>
           </button>
 
-          <button>
-            <p>Indoor Plants</p>
-            <p>[5]</p>
+          <button className="Shop-Left-Button">
+            <p className="Shop-Left-Text2">Indoor Plants</p>
+            <p className="Shop-Left-Text3">[5]</p>
           </button>
 
-          <button>
-            <p>Succulent</p>
-            <p>[4]</p>
+          <button className="Shop-Left-Button">
+            <p className="Shop-Left-Text2">Succulent</p>
+            <p className="Shop-Left-Text3">[4]</p>
           </button>
         </div>
 
-        <p>Filter By Price</p>
+        <p className="Shop-Left-Text">Filter By Price</p>
       </div>
 
-      <div className="Shop-Right">Right</div>
+      <div className="Shop-Right">
+        <div className="Shop-RightBox">
+          <div>
+            <Link to='/'>/Home</Link>
+            <Link style={{marginLeft:'5px'}} to='/Shop'>/Shop </Link>
+          </div>
+
+          <p className="Shop-Right-Text">All Products</p>
+
+          <div className="Shop-Right-Div">
+            sss
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
