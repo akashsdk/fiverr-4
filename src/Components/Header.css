@@ -62,12 +62,14 @@
 .dropdown-content {
   display: none;
   height: 170px;
-  width: 250px;
+  width: 150px;
   position: absolute;
   z-index: 1;
   margin-top: 220px;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 3px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -93,9 +95,9 @@
   display: none;
 }
 .dropdown-content-Link {
-  height: 40px;
-  width: 100%;
-  margin-top: 1px;
+  height: 30px;
+  width: 90%;
+  margin-top: 9px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,5 +106,6 @@
   text-decoration: none;
 }
 .dropdown-content-Link:hover {
-  border: 0.5px solid rgb(27, 180, 129);
+  border-left: 5px solid rgb(27, 180, 129);
+  border-right: 5px solid rgb(27, 180, 129);
 }

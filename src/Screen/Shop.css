@@ -1,0 +1,52 @@
+.Shop-Body {
+  height: auto;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Shop-Left {
+  width: 25%;
+  margin-left: 2.5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Shop-Search-Div {
+  height: 50px;
+  width: 90%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.Shop-Input {
+  height: 50px;
+  width: 70%;
+  border: 1px solid rgb(171, 171, 171);
+  outline: none;
+  padding: 20px;
+}
+.Shop-Input::placeholder {
+    font-style: italic;
+    font-size: 18px; 
+  }
+.Shop-Search-Button {
+  width: 30%;
+  height: 50px;
+  background-color: rgb(27, 180, 129);
+  border: 1px solid rgb(27, 180, 129);
+  color: #fff;
+}
+.Shop-Search-Text {
+    font-size: 20px;
+}
+
+.Shop-Right {
+  height: 1000px;
+  width: 70%;
+  border-left: 1px solid rgb(184, 183, 183);
+}
