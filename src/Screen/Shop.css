@@ -103,5 +103,8 @@
     font-weight: 600;
 }
 .Shop-Right-Div{
+    width: 100%;
     margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }

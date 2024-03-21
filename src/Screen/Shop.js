@@ -2,6 +2,13 @@ import React from "react";
 import "./Shop.css";
 import { Link } from "react-router-dom";
 
+import ProductsCart from "../Cart/ProductsCart";
+
+import Img1 from "../Img/Bonsai-1.jpeg";
+import Img2 from "../Img/Bonsai-2.jpeg";
+import Img3 from "../Img/Bonsai-3.jpeg";
+import Img4 from "../Img/Bonsai-4.jpeg";
+
 export default function Shop() {
   return (
     <div className="Shop-Body">
@@ -43,14 +50,24 @@ export default function Shop() {
       <div className="Shop-Right">
         <div className="Shop-RightBox">
           <div>
-            <Link to='/'>/Home</Link>
-            <Link style={{marginLeft:'5px'}} to='/Shop'>/Shop </Link>
+            <Link to="/">/Home</Link>
+            <Link style={{ marginLeft: "5px" }} to="/Shop">
+              /Shop{" "}
+            </Link>
           </div>
 
           <p className="Shop-Right-Text">All Products</p>
 
           <div className="Shop-Right-Div">
-            sss
+            <ProductsCart
+              image={Img1}
+              name="Product Name"
+              price="22.0"
+              rating={4}
+            />
+            <ProductsCart img={Img2} />
+            <ProductsCart img={Img3} />
+            <ProductsCart img={Img4} />
           </div>
         </div>
       </div>

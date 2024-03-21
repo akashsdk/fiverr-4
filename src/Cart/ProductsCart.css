@@ -1,0 +1,29 @@
+.Products-Body {
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.Products-Img {
+  height: 300px;
+  border-radius: 10px;
+}
+.cart-item__rating {
+  color: #f7d417; 
+  font-size: 1.2rem;
+}
+
+.cart-item__star {
+  margin-right: 3px;
+}
+.Products-Text1 {
+  font-size: 20px;
+  color: rgb(27, 180, 129);
+}
+.Products-Text2 {
+  font-size: 18px;
+}
