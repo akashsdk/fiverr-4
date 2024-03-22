@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Shop.css";
 import { Link } from "react-router-dom";
 
+import { Button } from "antd";
+
 import ProductsCart from "../Cart/ProductsCart";
 
 import Img1 from "../Img/Bonsai-1.jpeg";
@@ -47,7 +49,7 @@ export default function Shop() {
             }}
           >
             <p className="Shop-Left-Text2">All Products</p>
-            <p className="Shop-Left-Text3">[14]</p>
+            <p className="Shop-Left-Text3">[21]</p>
           </button>
 
           <button
@@ -148,7 +150,7 @@ export default function Shop() {
                     shippingFee="50"
                     category="Bonsai"
                   />
-                   <ProductsCart
+                  <ProductsCart
                     image={Img5}
                     name="Grafted Cactus"
                     price="32.00"
@@ -178,7 +180,7 @@ export default function Shop() {
                     shippingFee="50"
                     category="Cactus"
                   />
-                   <ProductsCart
+                  <ProductsCart
                     image={Img9}
                     name="Aluminum Plant"
                     price="50.00"
@@ -198,77 +200,15 @@ export default function Shop() {
                   />
                 </div>
 
-                <div className="Shop-Right-Div">
-                <ProductsCart
-                    image={Img11}
-                    name="Chinese Evergreen"
-                    price="19.50"
-                    rating={4}
-                    percentage="21"
-                    shippingFee="50"
-                    category="Indoor Plants"
-                  />
-                  <ProductsCart
-                    image={Img12}
-                    name="Hanging Weeping Fig"
-                    price="199.50"
-                    rating={2}
-                    percentage="43"
-                    shippingFee="50"
-                    category="Indoor Plants"
-                  />
-                   <ProductsCart
-                    image={Img13}
-                    name="Rubber Indoor Plant"
-                    price="199.50"
-                    rating={5}
-                    percentage="33"
-                    shippingFee="50"
-                    category="Indoor Plants"
-                  />
-                </div>
-
-                <div className="Shop-Right-Div">
-                  <ProductsCart
-                    image={Img14}
-                    name="Boncellensis Secullant"
-                    price="50.00"
-                    rating={5}
-                    percentage="15"
-                    shippingFee="50"
-                    category="Succulent"
-                  />
-                  <ProductsCart
-                    image={Img15}
-                    name="Crown Of Thorns"
-                    price="32.00"
-                    rating={3}
-                    percentage="15"
-                    shippingFee="50"
-                    category="Succulent"
-                  />
-                  <ProductsCart
-                    image={Img16}
-                    name="Gonialoe Variegata"
-                    price="19.50"
-                    rating={4}
-                    percentage="21"
-                    shippingFee="50"
-                    category="Succulent"
-                  />
-                </div>
-
-                <div className="Shop-Right-Div">
-                  <ProductsCart
-                    image={Img17}
-                    name="Thorny Secculent"
-                    price="199.50"
-                    rating={2}
-                    percentage="43"
-                    shippingFee="50"
-                    category="Succulent"
-                  />
-                </div>
+                <Button
+                  onClick={() => {
+                    setPage(6);
+                  }}
+                  type="link"
+                  danger
+                >
+                  See more...
+                </Button>
               </div>
             ) : page === 2 ? (
               <div>
@@ -406,7 +346,7 @@ export default function Shop() {
                     shippingFee="50"
                     category="Indoor Plants"
                   />
-                   <ProductsCart
+                  <ProductsCart
                     image={Img13}
                     name="Rubber Indoor Plant"
                     price="199.50"
@@ -462,6 +402,182 @@ export default function Shop() {
                     category="Succulent"
                   />
                 </div>
+              </div>
+            ) : page === 6 ? (
+              <div>
+                <p className="Shop-Right-Text">All Products</p>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img1}
+                    name="Desert Rose"
+                    price="100.00"
+                    rating={4}
+                    percentage="20"
+                    shippingFee="50"
+                    category="Bonsai"
+                  />
+                  <ProductsCart
+                    image={Img2}
+                    name="Juniper Bonsai"
+                    price="120.00"
+                    rating={3}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Bonsai"
+                  />
+                  <ProductsCart
+                    image={Img3}
+                    name="Lemon Bonsai"
+                    price="99.50"
+                    rating={4}
+                    percentage="22"
+                    shippingFee="50"
+                    category="Bonsai"
+                  />
+                </div>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img4}
+                    name="Periwinkle Bonsai"
+                    price="199.50"
+                    rating={5}
+                    percentage="33"
+                    shippingFee="50"
+                    category="Bonsai"
+                  />
+                  <ProductsCart
+                    image={Img5}
+                    name="Grafted Cactus"
+                    price="32.00"
+                    rating={5}
+                    percentage="10"
+                    shippingFee="50"
+                    category="Cactus"
+                  />
+                  <ProductsCart
+                    image={Img6}
+                    name="Office Desk Cactus"
+                    price="120.00"
+                    rating={3}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Cactus"
+                  />
+                </div>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img8}
+                    name="Periwinkle Bonsai"
+                    price="199.50"
+                    rating={5}
+                    percentage="33"
+                    shippingFee="50"
+                    category="Cactus"
+                  />
+                  <ProductsCart
+                    image={Img9}
+                    name="Aluminum Plant"
+                    price="50.00"
+                    rating={5}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Indoor Plants"
+                  />
+                  <ProductsCart
+                    image={Img10}
+                    name="Arrowhead"
+                    price="32.00"
+                    rating={3}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Indoor Plants"
+                  />
+                </div>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img11}
+                    name="Chinese Evergreen"
+                    price="19.50"
+                    rating={4}
+                    percentage="21"
+                    shippingFee="50"
+                    category="Indoor Plants"
+                  />
+                  <ProductsCart
+                    image={Img12}
+                    name="Hanging Weeping Fig"
+                    price="199.50"
+                    rating={2}
+                    percentage="43"
+                    shippingFee="50"
+                    category="Indoor Plants"
+                  />
+                  <ProductsCart
+                    image={Img13}
+                    name="Rubber Indoor Plant"
+                    price="199.50"
+                    rating={5}
+                    percentage="33"
+                    shippingFee="50"
+                    category="Indoor Plants"
+                  />
+                </div>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img14}
+                    name="Boncellensis Secullant"
+                    price="50.00"
+                    rating={5}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Succulent"
+                  />
+                  <ProductsCart
+                    image={Img15}
+                    name="Crown Of Thorns"
+                    price="32.00"
+                    rating={3}
+                    percentage="15"
+                    shippingFee="50"
+                    category="Succulent"
+                  />
+                  <ProductsCart
+                    image={Img16}
+                    name="Gonialoe Variegata"
+                    price="19.50"
+                    rating={4}
+                    percentage="21"
+                    shippingFee="50"
+                    category="Succulent"
+                  />
+                </div>
+
+                <div className="Shop-Right-Div">
+                  <ProductsCart
+                    image={Img17}
+                    name="Thorny Secculent"
+                    price="199.50"
+                    rating={2}
+                    percentage="43"
+                    shippingFee="50"
+                    category="Succulent"
+                  />
+                </div>
+
+                <Button
+                  onClick={() => {
+                    setPage(1);
+                  }}
+                  type="link"
+                  danger
+                >
+                  See Less
+                </Button>
               </div>
             ) : (
               <h1> Error page</h1>

@@ -22,6 +22,10 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path="/Shop-Bonsai" element={<Shop />} />
+          <Route path="/Shop-Cactus" element={<Shop />} />
+          <Route path="/Shop-IndoorPlants" element={<Shop />} />
+          <Route path="/Shop-Succulent" element={<Shop />} />
           <Route path="/Testimonials" element={<Testimonials />} />
           <Route path="/Cart" element={<ShopCart />} />
         </Routes>
