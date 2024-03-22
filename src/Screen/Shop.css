@@ -96,15 +96,63 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.Shop-Right-Text{
-    font-size: 90px;
-    color: rgb(27, 180, 129);
-    font-family: 'Franklin Gothic Medium';
-    font-weight: 600;
+.Shop-Right-Text {
+  font-size: 90px;
+  color: rgb(27, 180, 129);
+  font-family: "Franklin Gothic Medium";
+  font-weight: 600;
 }
-.Shop-Right-Div{
+.Shop-Right-Div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Shop-Body {
     width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .Shop-Left {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .Shop-Search-Div {
+    height: 40px;
+    width: 100%;
+  }
+  .Shop-Input {
+    height: 40px;
+    width: 70%;
+  }
+  .Shop-Search-Button {
+    width: 30%;
+    height: 42px;
+    margin-left: -2px;
+  }
+  .Shop-Left-Div {
+    width: 100%;
+  }
+  .Shop-Right {
+    height: auto;
+    width: 95%;
+    border-left: none;
+    margin-left: 2.5%;
+  }
+  .Shop-RightBox {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .Shop-Right-Text {
+    font-size: 40px;
+  }
+  
+}
+@media only screen and (max-width: 600px) {
+  .Shop-Right-Div {
+    flex-direction: column;
+    margin-top: 0px;
+  }
 }

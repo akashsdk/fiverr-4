@@ -109,3 +109,8 @@
   border-left: 5px solid rgb(27, 180, 129);
   border-right: 5px solid rgb(27, 180, 129);
 }
+@media only screen and (max-width: 1000px) {
+  .Header-box2{
+    display: none;
+  }
+}

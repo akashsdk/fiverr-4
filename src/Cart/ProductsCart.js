@@ -88,6 +88,7 @@ export default function ProductsCart({
       </div>
 
       <img className="Products-Img" src={image} alt="cart" />
+      
       <div className="Products-Per-Div2">
         <Tooltip
           placement="leftTop"

@@ -172,3 +172,42 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 600px) {
+  .Products-Body {
+    height: 210px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  }
+  .Products-Img {
+    height: 200px;
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 2%;
+    border-radius: 10px;
+  }
+  .Products-Div {
+    width: 48%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Products-Per-Div {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .Products-Per-Div2 {
+    display: block;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  
+  
+}
