@@ -10,7 +10,7 @@ import {
   CheckCircleOutlined,
 } from "@ant-design/icons";
 
-import { Button, Drawer, Space } from "antd";
+import { Button, Drawer, Space, notification } from "antd";
 import { Link } from "react-router-dom";
 
 export default function ProductsCart({
@@ -52,23 +52,35 @@ export default function ProductsCart({
     setOpen(false);
   };
 
+  //   Count and Notification
   const [count, setCount] = useState(1);
+  const maxCount = 10;
+  const minCount = 1;
 
   const handleIncrement = () => {
-    if (count < 10) {
+    if (count < maxCount) {
       setCount(count + 1);
     } else {
-      alert("Maximum value reached (10)");
+      openNotificationWithIcon("warning", "Maximum value reached (10)");
     }
   };
 
   const handleDecrement = () => {
-    if (count > 1) {
+    if (count > minCount) {
       setCount(count - 1);
     } else {
-      alert("Minimum value reached (0)");
+      openNotificationWithIcon("warning", "Minimum value reached (0)");
     }
   };
+
+  const openNotificationWithIcon = (type, message) => {
+    notification[type]({
+      message: message,
+      description:
+        "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+    });
+  };
+
   return (
     <div className="Products-Body">
       <div className="Products-Per-Div">
@@ -82,7 +94,18 @@ export default function ProductsCart({
           title="Add to cart"
           color="rgb(27, 180, 129)"
         >
-          <Link to="/Cart">
+          <Link
+            to={{
+              pathname: "/Cart",
+              state: {
+                image,
+                name,
+                price,
+                shippingFee,
+                category,
+              },
+            }}
+          >
             <button className="Products-Button">
               <ShoppingCartOutlined className="Products-Icon" />
             </button>
@@ -100,7 +123,19 @@ export default function ProductsCart({
         </Tooltip>
       </div>
 
-      <Link to="/Cart" className="Products-Div">
+      <Link
+        to={{
+          pathname: "/Cart",
+          state: {
+            image,
+            name,
+            price,
+            shippingFee,
+            category,
+          },
+        }}
+        className="Products-Div"
+      >
         <p className="Products-Text1">{name}</p>
 
         <div className="cart-item__rating">
