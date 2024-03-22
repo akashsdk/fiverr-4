@@ -8,14 +8,12 @@ import AboutUs from "./Screen/AboutUs";
 import Shop from "./Screen/Shop";
 import Testimonials from "./Screen/Testimonials";
 import Footer from "./Components/Footer";
-import Header from "./Components/Header";
 import ShopCart from './Components/ShopCart';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header/>
         <Routes>
           <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<Home />} />

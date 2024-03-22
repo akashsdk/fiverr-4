@@ -1,8 +1,12 @@
-import React from 'react'
-import Header from '../Components/Header'
+import React from "react";
+import "./Testimonials.css";
+import Header from "../Components/Header";
 
 export default function Testimonials() {
   return (
-    <Header></Header>
-  )
+    <div style={{width:'100%'}}>
+      <Header />
+      <div>Testimonials</div>
+    </div>
+  );
 }
