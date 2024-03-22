@@ -65,6 +65,8 @@ export default function Shop() {
               price="100.00"
               rating={4}
               percentage="20"
+              shippingFee='50'
+              category='Bonsai'
             />
             <ProductsCart
               image={Img2}
@@ -72,6 +74,8 @@ export default function Shop() {
               price="120.00"
               rating={3}
               percentage="15"
+              shippingFee='50'
+              category='Bonsai'
             />
             <ProductsCart
               image={Img3}
@@ -79,6 +83,8 @@ export default function Shop() {
               price="99.50"
               rating={4}
               percentage="22"
+              shippingFee='50'
+              category='Bonsai'
             />
           </div>
 
@@ -91,6 +97,8 @@ export default function Shop() {
               price="199.50"
               rating={5}
               percentage="33"
+              shippingFee='50'
+              category='Bonsai'
             />
           </div>
         </div>

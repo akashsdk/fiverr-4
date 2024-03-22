@@ -80,3 +80,51 @@
   font-size: 18px;
   margin-left: 10px;
 }
+.Products-Drawer-Box{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Products-Drawer-Left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Products-Drawer-Right{
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.Products-Drawer-Img{
+    height: 55vh;
+}
+.Products-Drawer-Text1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium';
+    color: rgb(27, 180, 129);
+}
+.Products-Drawer-Text2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.Products-Drawer-LineDiv{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.Products-Drawer-Text3{
+    font-size: 20px;
+    margin-top: 15px;
+    opacity: .7;
+}
