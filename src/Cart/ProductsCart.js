@@ -2,9 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./ProductsCart.css";
 
 import { Tooltip } from "antd";
-import { ShoppingCartOutlined, EyeOutlined } from "@ant-design/icons";
+import {
+  ShoppingCartOutlined,
+  EyeOutlined,
+  MinusOutlined,
+  PlusOutlined,
+  CheckCircleOutlined,
+} from "@ant-design/icons";
 
-import { Button, Drawer, Radio, Space } from "antd";
+import { Button, Drawer, Space } from "antd";
+import { Link } from "react-router-dom";
 
 export default function ProductsCart({
   image,
@@ -45,6 +52,23 @@ export default function ProductsCart({
     setOpen(false);
   };
 
+  const [count, setCount] = useState(1);
+
+  const handleIncrement = () => {
+    if (count < 10) {
+      setCount(count + 1);
+    } else {
+      alert("Maximum value reached (10)");
+    }
+  };
+
+  const handleDecrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    } else {
+      alert("Minimum value reached (0)");
+    }
+  };
   return (
     <div className="Products-Body">
       <div className="Products-Per-Div">
@@ -58,9 +82,11 @@ export default function ProductsCart({
           title="Add to cart"
           color="rgb(27, 180, 129)"
         >
-          <button className="Products-Button">
-            <ShoppingCartOutlined className="Products-Icon" />
-          </button>
+          <Link to="/Cart">
+            <button className="Products-Button">
+              <ShoppingCartOutlined className="Products-Icon" />
+            </button>
+          </Link>
         </Tooltip>
 
         <Tooltip
@@ -73,7 +99,8 @@ export default function ProductsCart({
           </button>
         </Tooltip>
       </div>
-      <div className="Products-Div">
+
+      <Link to="/Cart" className="Products-Div">
         <p className="Products-Text1">{name}</p>
 
         <div className="cart-item__rating">
@@ -91,10 +118,11 @@ export default function ProductsCart({
           <p className="Products-Text2">${price}</p>
           <p className="Products-Text3">${result}.00</p>
         </div>
-      </div>
+      </Link>
+
       <Drawer
         title="Quick view"
-        placement='right'
+        placement="right"
         onClose={onClose}
         open={open}
         extra={
@@ -118,12 +146,49 @@ export default function ProductsCart({
           <div className="Products-Drawer-Right">
             <p className="Products-Drawer-Text1">{name}</p>
             <p className="Products-Drawer-Text2">${result}.00</p>
-            <div  className="Products-Drawer-LineDiv"/>
-            <div style={{display:'flex'}}>
+            <div className="Products-Drawer-LineDiv" />
+            <div style={{ display: "flex" }}>
               <p>Category:</p>
-              <p style={{color:'rgb(27, 180, 129)'}}>{category}</p>
+              <p style={{ color: "rgb(27, 180, 129)" }}>{category}</p>
             </div>
-          <p className="Products-Drawer-Text3">Free shipping on orders over ${shippingFee}!</p>
+            <p className="Products-Drawer-Text3">
+              Free shipping on orders over ${shippingFee}!
+            </p>
+
+            <div style={{ display: "flex", marginTop: "30px" }}>
+              <CheckCircleOutlined className="Products-Drawer-Icon" />
+              <p className="Products-Drawer-Text4">
+                No-Risk Money Back Guarantee!
+              </p>
+            </div>
+
+            <div style={{ display: "flex" }}>
+              <CheckCircleOutlined className="Products-Drawer-Icon" />
+              <p className="Products-Drawer-Text4">No Hassle Refunds</p>
+            </div>
+
+            <div style={{ display: "flex" }}>
+              <CheckCircleOutlined className="Products-Drawer-Icon" />
+              <p className="Products-Drawer-Text4">Secure Payments</p>
+            </div>
+
+            <div style={{ display: "flex", marginTop: "30px" }}>
+              <div className="Products-Drawer-Div">
+                <MinusOutlined
+                  onClick={handleDecrement}
+                  className="Products-Drawer-Icon2"
+                />
+                <p className="Products-Drawer-Text5">{count}</p>
+                <PlusOutlined
+                  onClick={handleIncrement}
+                  className="Products-Drawer-Icon2"
+                />
+              </div>
+
+              <button className="Products-Drawer-Button">
+                <p className="Products-Drawer-Text6">Buy Now</p>
+              </button>
+            </div>
           </div>
         </div>
       </Drawer>

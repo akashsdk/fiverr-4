@@ -10,7 +10,6 @@
   flex-direction: column;
   margin: 10px;
   padding: 10px;
-  cursor: pointer;
 }
 .Products-Per-Div {
   position: absolute;
@@ -80,51 +79,96 @@
   font-size: 18px;
   margin-left: 10px;
 }
-.Products-Drawer-Box{
-    width: 80%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Products-Drawer-Box {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Products-Drawer-Left{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Products-Drawer-Left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Products-Drawer-Right{
-    height: 50vh;
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+.Products-Drawer-Right {
+  height: 50vh;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.Products-Drawer-Img{
-    height: 55vh;
+.Products-Drawer-Img {
+  height: 55vh;
 }
-.Products-Drawer-Text1{
-    font-size: 35px;
-    font-weight: 600;
-    font-family: 'Franklin Gothic Medium';
-    color: rgb(27, 180, 129);
+.Products-Drawer-Text1 {
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium";
+  color: rgb(27, 180, 129);
 }
-.Products-Drawer-Text2{
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 20px;
+.Products-Drawer-Text2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
 }
-.Products-Drawer-LineDiv{
-    height: 1px;
-    width: 100%;
-    background-color: black;
-    opacity: .5;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.Products-Drawer-LineDiv {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-.Products-Drawer-Text3{
-    font-size: 20px;
-    margin-top: 15px;
-    opacity: .7;
+.Products-Drawer-Text3 {
+  font-size: 20px;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+.Products-Drawer-Icon {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(27, 180, 129);
+}
+.Products-Drawer-Text4 {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-left: 5px;
+}
+.Products-Drawer-Div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 130px;
+  opacity: 0.7;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.Products-Drawer-Icon2 {
+  font-size: 22px;
+  cursor: pointer;
+}
+.Products-Drawer-Text5 {
+  font-size: 22px;
+}
+.Products-Drawer-Button {
+  height: 40px;
+  width: 130px;
+  background-color: rgb(27, 180, 129);
+  border-radius: 3px;
+  margin-left: 30px;
+  color: #fff;
+  border: 1px solid rgb(27, 180, 129);
+}
+.Products-Drawer-Button:hover {
+  background-color: #fff;
+  color: rgb(27, 180, 129);
+}
+.Products-Drawer-Text6 {
+  font-size: 20px;
+  font-weight: 600;
 }
