@@ -205,9 +205,11 @@
   }
   .Products-Per-Div2 {
     display: block;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 10px;
   }
-  
+  .Products-Per-Div3{
+    display: none;
+  }
   
 }

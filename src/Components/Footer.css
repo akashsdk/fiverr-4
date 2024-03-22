@@ -36,7 +36,7 @@
 }
 .Footer-Box-text3 {
   font-size: 50px;
-  font-family: 'Franklin Gothic Medium';
+  font-family: "Franklin Gothic Medium";
   color: rgb(27, 180, 129);
   font-weight: 700;
 }
@@ -101,5 +101,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-    
+  .Footer-Box-text3 {
+    font-size: 40px;
   }
+  .Footer-Box-text1 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .Footer-Box-text2 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  .Footer-Box3 {
+    margin-top: -20px;
+  }
+}

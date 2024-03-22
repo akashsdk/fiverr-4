@@ -88,7 +88,7 @@ export default function ProductsCart({
       </div>
 
       <img className="Products-Img" src={image} alt="cart" />
-      
+
       <div className="Products-Per-Div2">
         <Tooltip
           placement="leftTop"
@@ -113,15 +113,17 @@ export default function ProductsCart({
           </Link>
         </Tooltip>
 
-        <Tooltip
-          placement="leftTop"
-          title="Quick view"
-          color="rgb(27, 180, 129)"
-        >
-          <button className="Products-Button" onClick={showDrawer}>
-            <EyeOutlined className="Products-Icon" />
-          </button>
-        </Tooltip>
+        <div className="Products-Per-Div3">
+          <Tooltip
+            placement="leftTop"
+            title="Quick view"
+            color="rgb(27, 180, 129)"
+          >
+            <button className="Products-Button" onClick={showDrawer}>
+              <EyeOutlined className="Products-Icon" />
+            </button>
+          </Tooltip>
+        </div>
       </div>
 
       <Link
