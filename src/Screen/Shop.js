@@ -61,13 +61,37 @@ export default function Shop() {
           <div className="Shop-Right-Div">
             <ProductsCart
               image={Img1}
-              name="Product Name"
-              price="22.0"
+              name="Desert Rose"
+              price="100.00"
               rating={4}
+              percentage="20"
             />
-            <ProductsCart img={Img2} />
-            <ProductsCart img={Img3} />
-            <ProductsCart img={Img4} />
+            <ProductsCart
+              image={Img2}
+              name="Juniper Bonsai"
+              price="120.00"
+              rating={3}
+              percentage="15"
+            />
+            <ProductsCart
+              image={Img3}
+              name="Lemon Bonsai"
+              price="99.50"
+              rating={4}
+              percentage="22"
+            />
+          </div>
+
+          <div  className="Shop-Right-Div">
+
+          
+            <ProductsCart
+              image={Img4}
+              name="Periwinkle Bonsai"
+              price="199.50"
+              rating={5}
+              percentage="33"
+            />
           </div>
         </div>
       </div>
