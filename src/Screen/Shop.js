@@ -28,6 +28,7 @@ import Img14 from "../Img/Succulent1.jpeg";
 import Img15 from "../Img/Succulent2.jpeg";
 import Img16 from "../Img/Succulent3.jpeg";
 import Img17 from "../Img/Succulent4.jpeg";
+import Footer from "../Components/Footer";
 
 export default function Shop() {
   const [page, setPage] = useState(1);
@@ -591,6 +592,8 @@ export default function Shop() {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 }

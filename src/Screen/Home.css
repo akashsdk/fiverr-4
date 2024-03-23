@@ -65,4 +65,11 @@
   .Home-Text2 {
     font-size: 40px;
   }
+  .Home-Box2 {
+    height: 40px;
+    width: 130px;
+  }
+  .Home-Text3 {
+      font-size: 20px;
+    }
 }

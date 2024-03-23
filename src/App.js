@@ -7,7 +7,6 @@ import ErrorPage from "./Screen/ErrorPage";
 import AboutUs from "./Screen/AboutUs";
 import Shop from "./Screen/Shop";
 import Testimonials from "./Screen/Testimonials";
-import Footer from "./Components/Footer";
 import ShopCart from './Components/ShopCart';
 import Checkout from './Components/Checkout';
 
@@ -29,7 +28,6 @@ function App() {
           <Route path="/Cart" element={<ShopCart />} />
           <Route path="/Checkout" element={<Checkout />} />
         </Routes>
-        <Footer />
         <FloatButton.BackTop visibilityHeight={0} />
       </div>
     </BrowserRouter>
