@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Button, Drawer, Space, notification } from "antd";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,6 +9,9 @@ import {
   CloseCircleOutlined,
   MinusOutlined,
   PlusOutlined,
+  MenuOutlined,
+  CloseOutlined,
+  RightOutlined,
 } from "@ant-design/icons";
 
 import Img1 from "../Img/Bonsai-1.jpeg";
@@ -99,74 +102,201 @@ export default function Header({ setPage }) {
     (total, item) => total + item.price * item.quantity,
     0
   );
+  // Calculate total number of items
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
+  //set menu opthion
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth >= 1000);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth >= 1000);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // menu-Box
+
+  const [menuOpen2, setMenuOpen2] = useState(false);
+
+  const toggleMenu2 = () => {
+    setMenuOpen2(!menuOpen2);
+  };
   return (
     <div className="Header-Body">
-      <div className="Header-box1">
-        <Link to="/">
-          <p style={{ fontSize: "30px" }}>Shop Name</p>
-        </Link>
-      </div>
-
-      <div className="Header-box2">
-        <Link to="/Home" className="Header-Link">
-          <p className="Header-Text">Home</p>
-        </Link>
-
-        <div className="dropdown">
-          <Link
-            to="/Shop"
-            className="Header-Link"
-            onClick={() => handleCategoryClick(1)}
-          >
-            <p className="Header-Text">Shop</p>
+      <div className="Header-Box">
+        <div className="Header-box1">
+          <Link to="/">
+            <p style={{ fontSize: "30px" }}>Shop Name</p>
           </Link>
-          <DownOutlined className="headerBox-2-Icon" />
-          <UpOutlined className="headerBox-2-Icon2" />
-          <div className="dropdown-content">
-            <Link
-              to="/Shop-Bonsai"
-              className="dropdown-content-Link"
-              onClick={() => handleCategoryClick(2)}
-            >
-              <p className="dropdown-content-Text">Bonsai</p>
-            </Link>
-            <Link
-              to="/Shop-Cactus"
-              className="dropdown-content-Link"
-              onClick={() => handleCategoryClick(3)}
-            >
-              <p className="dropdown-content-Text">Cactus</p>
-            </Link>
-            <Link
-              to="/Shop-IndoorPlants"
-              className="dropdown-content-Link"
-              onClick={() => handleCategoryClick(4)}
-            >
-              <p className="dropdown-content-Text"> Indoor Plants</p>
-            </Link>
-            <Link
-              to="/Shop-Succulent"
-              className="dropdown-content-Link"
-              onClick={() => handleCategoryClick(5)}
-            >
-              <p className="dropdown-content-Text">Succulent</p>
-            </Link>
-          </div>
         </div>
-        <Link to="/AboutUs" className="Header-Link">
-          <p className="Header-Text">About Us</p>
-        </Link>
-        <Link to="/Testimonials" className="Header-Link">
-          <p className="Header-Text">Testimonials</p>
-        </Link>
-        <button onClick={showDrawer} className="Header-Link">
-          <ShoppingCartOutlined className="Header-Icon" />
-          <div className="Header-Icon-div">
-            <p className="Header-Icon-Text">{cartItems.length}</p>
+
+        <div className="Header-box2">
+          <Link to="/Home" className="Header-Link">
+            <p className="Header-Text">Home</p>
+          </Link>
+
+          <div className="dropdown">
+            <Link
+              to="/Shop"
+              className="Header-Link"
+              onClick={() => handleCategoryClick(1)}
+            >
+              <p className="Header-Text">Shop</p>
+            </Link>
+            <DownOutlined className="headerBox-2-Icon" />
+            <UpOutlined className="headerBox-2-Icon2" />
+            <div className="dropdown-content">
+              <Link
+                to="/Shop-Bonsai"
+                className="dropdown-content-Link"
+                onClick={() => handleCategoryClick(2)}
+              >
+                <p className="dropdown-content-Text">Bonsai</p>
+              </Link>
+              <Link
+                to="/Shop-Cactus"
+                className="dropdown-content-Link"
+                onClick={() => handleCategoryClick(3)}
+              >
+                <p className="dropdown-content-Text">Cactus</p>
+              </Link>
+              <Link
+                to="/Shop-IndoorPlants"
+                className="dropdown-content-Link"
+                onClick={() => handleCategoryClick(4)}
+              >
+                <p className="dropdown-content-Text"> Indoor Plants</p>
+              </Link>
+              <Link
+                to="/Shop-Succulent"
+                className="dropdown-content-Link"
+                onClick={() => handleCategoryClick(5)}
+              >
+                <p className="dropdown-content-Text">Succulent</p>
+              </Link>
+            </div>
           </div>
-        </button>
+          <Link to="/AboutUs" className="Header-Link">
+            <p className="Header-Text">About Us</p>
+          </Link>
+          <Link to="/Testimonials" className="Header-Link">
+            <p className="Header-Text">Testimonials</p>
+          </Link>
+          <button onClick={showDrawer} className="Header-Link">
+            <ShoppingCartOutlined className="Header-Icon" />
+            <div className="Header-Icon-div">
+              <p className="Header-Icon-Text">{cartItems.length}</p>
+            </div>
+          </button>
+        </div>
+
+        <div className="Header-box3">
+          {menuOpen ? (
+            <div
+              style={{
+                transition: "height 0.3s ease-in-out",
+              }}
+            >
+              <CloseOutlined
+                className="Header-box3-Icon"
+                onClick={toggleMenu}
+              />
+            </div>
+          ) : (
+            <MenuOutlined className="Header-box3-Icon" onClick={toggleMenu} />
+          )}
+        </div>
       </div>
+
+      {menuOpen && !isMobile && (
+        <div className="Header-box3-Div">
+          <Link to="/Home" className="Header-Link">
+            <p className="Header-Text">Home</p>
+          </Link>
+
+          <div className="Header-box3-Div2">
+            <Link
+              to="/Shop"
+              className="Header-Link"
+              onClick={() => handleCategoryClick(1)}
+            >
+              <p className="Header-Text">Shop</p>
+            </Link>
+
+            {menuOpen2 ? (
+              <div style={{ transition: "height 0.3s ease-in-out" }}>
+                <DownOutlined
+                  onClick={toggleMenu2}
+                  className="Header-box3-Icon2"
+                />
+              </div>
+            ) : (
+              <UpOutlined onClick={toggleMenu2} className="Header-box3-Icon2" />
+            )}
+          </div>
+
+          {menuOpen2 ? (
+            <></>
+          ) : (
+            <div className="Header-box3-Div3">
+             <Link
+                to="/Shop-Bonsai"
+                className="Header-Link"
+                onClick={() => handleCategoryClick(2)}
+              >
+                <RightOutlined />
+                <p className="dropdown-content-Text">Bonsai</p>
+              </Link>
+              <Link
+                to="/Shop-Cactus"
+                className="Header-Link"
+                onClick={() => handleCategoryClick(3)}
+              >
+                <RightOutlined />
+                <p className="dropdown-content-Text">Cactus</p>
+              </Link>
+              <Link
+                to="/Shop-IndoorPlants"
+                className="Header-Link"
+                onClick={() => handleCategoryClick(4)}
+              >
+                <RightOutlined />
+                <p className="dropdown-content-Text"> Indoor Plants</p>
+              </Link>
+              <Link
+                to="/Shop-Succulent"
+                className="Header-Link"
+                onClick={() => handleCategoryClick(5)}
+              >
+                <RightOutlined />
+                <p className="dropdown-content-Text">Succulent</p>
+              </Link>
+            </div>
+          )}
+
+          <Link to="/AboutUs" className="Header-Link">
+            <p className="Header-Text">About Us</p>
+          </Link>
+
+          <Link to="/Testimonials" className="Header-Link">
+            <p className="Header-Text">Testimonials</p>
+          </Link>
+        </div>
+      )}
 
       <Drawer
         title="Shopping Cart"
@@ -220,7 +350,7 @@ export default function Header({ setPage }) {
           <div className="Header-Drawer-Box2">
             <div className="Header-Drawer-Line" />
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <p className="Header-Drawer-Text4">Total Amount:</p>
+              <p className="Header-Drawer-Text4">Total Amount({totalItems}):</p>
               <p className="Header-Drawer-Text5">${totalPrice.toFixed(2)}</p>
             </div>
             <div className="Header-Drawer-Line" />
