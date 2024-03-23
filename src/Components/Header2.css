@@ -1,0 +1,30 @@
+.Header2-Box {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.Header2-Icon {
+  font-size: 35px;
+  color: rgb(27, 180, 129);
+}
+.Header2-box3-Div{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    flex-direction: column;
+    background-color: transparent;
+    transition: height 0.3s ease-in-out;
+    color: #fff;
+  }
+
+  .Header2-Text {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Segoe UI";
+    color: #fff;
+  }

@@ -1,16 +1,68 @@
-.Home-body{
-    height: auto;
-    width: 100%;
+.Home-body {
+  height: 100vh;
+  width: 100%;
+}
+.Home-Img {
+  height: 100vh;
+  width: 100%;
+}
+.Home-Div {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  overflow-y: auto;
+}
+.Home-Box {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Home-Text {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium";
+}
+.Home-Text2 {
+  font-size: 100px;
+  font-family: "Franklin Gothic Medium";
+}
+.Home-Box2 {
+  height: 50px;
+  width: 180px;
+  background-color: rgb(27, 180, 129);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+  border-radius: 5px;
+}
+.Home-Box2:hover {
+    background-color: transparent;
+    color: rgb(27, 180, 129);
+}
+.Home-Text3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Franklin Gothic Medium";
+  }
+@media only screen and (max-width: 1000px) {
+  .Home-Text {
+    font-size: 25px;
+  }
+  .Home-Text2 {
+    font-size: 60px;
+  }
 }
 
-.Home-Box1-Img{
-    height: 100vh;
-    width: 100%;
-    opacity: .9;
-}
-.Home-Box1-Div{
-    height: auto;
-    width: 100%;
-    position: absolute;
-    
+@media only screen and (max-width: 600px) {
+  .Home-Text {
+    font-size: 20px;
+  }
+  .Home-Text2 {
+    font-size: 40px;
+  }
 }

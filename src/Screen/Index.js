@@ -3,6 +3,6 @@ import './Index.css';
 
 export default function Index() {
   return (
-    <div>Index</div>
+    <div style={{height:'2000px', backgroundColor:'#fff'}}>Index</div>
   )
 }
