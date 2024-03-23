@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
+import { Button, Drawer, Space, notification } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ShoppingCartOutlined,
   DownOutlined,
   UpOutlined,
+  CloseCircleOutlined,
+  MinusOutlined,
+  PlusOutlined,
 } from "@ant-design/icons";
+
+import Img1 from "../Img/Bonsai-1.jpeg";
+import Img2 from "../Img/Cactus1.jpeg";
+import Img3 from "../Img/Indoor1.jpeg";
 
 export default function Header({ setPage }) {
   const navigate = useNavigate();
@@ -14,6 +22,83 @@ export default function Header({ setPage }) {
     navigate("/Shop");
     setPage(pageValue);
   };
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  // Count and Notification
+  const maxCount = 10;
+  const minCount = 1;
+
+  const openNotificationWithIcon = (type, message) => {
+    notification[type]({
+      message: message,
+      description:
+        "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+    });
+  };
+
+  // Shopping cart items
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: "Desert Rose",
+      price: 26.0,
+      quantity: 1,
+      img: Img1,
+    },
+    {
+      id: 2,
+      name: "Grafted Cactus",
+      price: 80.0,
+      quantity: 1,
+      img: Img2,
+    },
+    {
+      id: 3,
+      name: "Aluminum Plant",
+      price: 32.0,
+      quantity: 1,
+      img: Img3,
+    },
+    // Add more items as needed
+  ]);
+
+  const handleIncrement = (itemId) => {
+    const updatedCartItems = cartItems.map((item) =>
+      item.id === itemId && item.quantity < maxCount
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+    );
+    setCartItems(updatedCartItems);
+  };
+
+  const handleDecrement = (itemId) => {
+    const updatedCartItems = cartItems.map((item) =>
+      item.id === itemId && item.quantity > minCount
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
+    setCartItems(updatedCartItems);
+  };
+
+  const handleDeleteItem = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+    openNotificationWithIcon("success", "Item removed from cart!");
+  };
+
+  // Calculate total price
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   return (
     <div className="Header-Body">
@@ -75,13 +160,85 @@ export default function Header({ setPage }) {
         <Link to="/Testimonials" className="Header-Link">
           <p className="Header-Text">Testimonials</p>
         </Link>
-        <Link to="/Cart" className="Header-Link">
+        <button onClick={showDrawer} className="Header-Link">
           <ShoppingCartOutlined className="Header-Icon" />
           <div className="Header-Icon-div">
-            <p className="Header-Icon-Text">0</p>
+            <p className="Header-Icon-Text">{cartItems.length}</p>
           </div>
-        </Link>
+        </button>
       </div>
+
+      <Drawer
+        title="Shopping Cart"
+        placement="right"
+        width={500}
+        onClose={onClose}
+        open={open}
+        extra={
+          <Space>
+            <Button onClick={onClose}>Cancel</Button>
+          </Space>
+        }
+      >
+        <div className="Header-Drawer-Body">
+          {cartItems.map((item) => (
+            <div key={item.id} className="Header-Drawer-Box">
+              <div style={{ display: "flex" }}>
+                <img
+                  src={item.img}
+                  alt="Drawer"
+                  className="Header-Drawer-Img"
+                />
+                <div className="Header-Drawer-Div1">
+                  <p className="Header-Drawer-Text1">{item.name}</p>
+                  <div className="Header-Drawer-Div">
+                    <MinusOutlined
+                      onClick={() => handleDecrement(item.id)}
+                      className="Header-Drawer-Icon2"
+                    />
+                    <p className="Header-Drawer-Text2">{item.quantity}</p>
+                    <PlusOutlined
+                      onClick={() => handleIncrement(item.id)}
+                      className="Header-Drawer-Icon2"
+                    />
+                  </div>
+                </div>
+
+                <div className="Header-Drawer-Div2">
+                  <CloseCircleOutlined
+                    onClick={() => handleDeleteItem(item.id)}
+                    className="Header-Drawer-Icon1"
+                  />
+                  <p className="Header-Drawer-Text3">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+              <div className="Header-Drawer-Line" />
+            </div>
+          ))}
+          <div className="Header-Drawer-Box2">
+            <div className="Header-Drawer-Line" />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p className="Header-Drawer-Text4">Total Amount:</p>
+              <p className="Header-Drawer-Text5">${totalPrice.toFixed(2)}</p>
+            </div>
+            <div className="Header-Drawer-Line" />
+            <div style={{ height: "30px" }} />
+            <Link to="/Cart">
+              <div className="Header-Drawer-Link">
+                <p className="Header-Drawer-Text6">View Cart</p>
+              </div>
+            </Link>
+
+            <Link to="/Checkout">
+              <div className="Header-Drawer-Link">
+                <p className="Header-Drawer-Text6">Checkout</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </Drawer>
     </div>
   );
 }

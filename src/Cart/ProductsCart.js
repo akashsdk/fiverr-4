@@ -222,10 +222,12 @@ export default function ProductsCart({
                   className="Products-Drawer-Icon2"
                 />
               </div>
-
-              <button className="Products-Drawer-Button">
-                <p className="Products-Drawer-Text6">Buy Now</p>
-              </button>
+              
+              <Link to="/Checkout">
+                <button className="Products-Drawer-Button">
+                  <p className="Products-Drawer-Text6">Buy Now</p>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
