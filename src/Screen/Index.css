@@ -1,0 +1,53 @@
+.Index-Body{
+    height: auto;
+    width: 100%;
+    background-color: aliceblue;
+    color: black;
+}
+.Index-Top-Div{
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+}
+.Index-Top-Div2{
+    height: auto;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Index-Top-Div3{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(232, 232, 232);
+    margin-top: 10px;
+}
+.Index-Top-Icon{
+    height: 40px;
+}
+.Index-Top-Div4{
+    width: 60%;
+    margin-left: 5%;
+}
+.Index-Top-Text1{
+    font-size: 25px;
+    font-family: "Franklin Gothic Medium";
+    font-weight: 700;
+    text-align: left;
+}
+.Index-Top-Text2{
+    font-size: 20px;
+    font-family: "Franklin Gothic Medium";
+    text-align: left;
+}
+.Index-Dow-Div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
