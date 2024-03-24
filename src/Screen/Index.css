@@ -1,53 +1,147 @@
-.Index-Body{
+.Index-Body {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  color: black;
+}
+.Index-Top-Div {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+.Index-Top-Div2 {
+  height: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Index-Top-Div3 {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(232, 232, 232);
+  margin-top: 10px;
+}
+.Index-Top-Icon {
+  height: 40px;
+}
+.Index-Top-Div4 {
+  width: 60%;
+  margin-left: 5%;
+}
+.Index-Top-Text1 {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium";
+  font-weight: 700;
+  text-align: left;
+}
+.Index-Top-Text2 {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium";
+  text-align: left;
+}
+.Index-Dow-Div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Index-Dow-Div2 {
+  width: 50%;
+}
+.Index-container {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Index-Dow-Img {
+  height: 350px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.Index-Dow-Img:hover {
+  transform: scale(1.1);
+}
+.Index-Dow-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+.Index-Dow-Link:hover {
+  color: rgb(27, 180, 129);
+  border-bottom: 1px solid rgb(27, 180, 129);
+  border-top: 1px solid rgb(27, 180, 129);
+}
+.Index-Dow-Text {
+  font-size: 20px;
+  font-weight: 500;
+}
+.Index-Dow-Icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.Index-Spec {
+  height: 50px;
+  background-color: #fff;
+}
+.Index-Src-Mb {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Index-Src-Mb {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Index-Top-Div2 {
     height: auto;
     width: 100%;
-    background-color: aliceblue;
-    color: black;
-}
-.Index-Top-Div{
-    height: auto;
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-}
-.Index-Top-Div2{
-    height: auto;
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.Index-Top-Div3{
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background-color: rgb(232, 232, 232);
-    margin-top: 10px;
-}
-.Index-Top-Icon{
+  }
+  .Index-Spec {
     height: 40px;
-}
-.Index-Top-Div4{
-    width: 60%;
-    margin-left: 5%;
-}
-.Index-Top-Text1{
-    font-size: 25px;
-    font-family: "Franklin Gothic Medium";
-    font-weight: 700;
-    text-align: left;
-}
-.Index-Top-Text2{
-    font-size: 20px;
-    font-family: "Franklin Gothic Medium";
-    text-align: left;
-}
-.Index-Dow-Div{
+  }
+  .Index-Dow-Div2 {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Index-Src-Mb {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Index-Top-Div {
+    flex-direction: column;
+  }
+  .Index-Top-Div2 {
+    margin-top: 30px;
+  }
+  .Index-Top-Text1 {
+    font-size: 20px;
+  }
+  .Index-Top-Text2 {
+    font-size: 18px;
+  }
+  .Index-Spec {
+    height: 20px;
+  }
+  .Index-container {
+    height: 250px;
+  }
+  .Index-Dow-Img {
+    height: 200px;
+  }
 }

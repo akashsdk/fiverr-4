@@ -50,17 +50,17 @@ export default function Footer() {
 
         <div className="Footer-Box3">
           <p className="Footer-Box-text1">Email:</p>
-          <p className="Footer-Box-text2">info@example.com</p>
+          <p className="Footer-Box-text2">info@greenery.com</p>
         </div>
       </div>
       <div className="Footer-div">
         <p className="Footer-Box-text5">
-          Copyright &copy; {new Date().getFullYear()} Shop Name
+          Copyright &copy; {new Date().getFullYear()} Greenery
           <br />
           All rights reserved
         </p>
 
-        <p className="Footer-Box-text6">Powered by Shop Name</p>
+        <p className="Footer-Box-text6">Powered by Greenery.</p>
       </div>
     </div>
   );

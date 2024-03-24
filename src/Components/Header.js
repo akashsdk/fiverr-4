@@ -18,6 +18,8 @@ import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
 
+import Logo from '../Icon/Logo and Icon G.png';
+
 export default function Header({ setPage }) {
   const navigate = useNavigate();
 
@@ -140,7 +142,7 @@ export default function Header({ setPage }) {
       <div className="Header-Box">
         <div className="Header-box1">
           <Link to="/">
-            <p style={{ fontSize: "30px" }}>Shop Name</p>
+            <img className="Header-ImgLogo" src={Logo} alt="Logo"/>
           </Link>
         </div>
 
