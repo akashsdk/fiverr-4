@@ -4,6 +4,9 @@ import "./Checkout.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { DownOutlined } from '@ant-design/icons';
+
+
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
@@ -15,8 +18,22 @@ export default function Checkout() {
       <div className="Checkout-Body">
         <p className="Checkout-Text1">Checkout</p>
 
+        <div className="Checkout-Top-Box">
+          <button className="Checkout-Top-Button">
+            <div style={{display:'flex'}}>
+              <p className="Checkout-Right-Text1">Show Order Summary</p>
+              <DownOutlined className="Checkout-Top-Icon"/>
+            </div>
+
+            <p className="Checkout-Right-Text1">$188.00</p>
+          </button>
+        </div>
+
         <div className="Checkout-Box">
-          <div className="Checkout-Left">Left Side</div>
+          <div className="Checkout-Left">
+            <p className="Checkout-Text2">Customer information</p>
+          </div>
+
           <div className="Checkout-Right">
             <p className="Checkout-Text2">Your order</p>
 

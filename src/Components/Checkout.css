@@ -22,6 +22,32 @@
   font-family: "Franklin Gothic Medium";
   font-weight: 600;
 }
+/* Top-Box */
+.Checkout-Top-Box {
+  display: none;
+}
+.Checkout-Top-Button {
+    height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(159, 159, 159);
+  padding: 10px;
+  border-radius: 5px;
+}
+.Checkout-Top-Icon{
+    margin-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+/* Box */
 .Checkout-Box {
   width: 100%;
   display: flex;
@@ -32,6 +58,7 @@
   width: 55%;
   background-color: aqua;
 }
+
 /* Right-Side */
 .Checkout-Right {
   width: 40%;
@@ -74,29 +101,34 @@
   font-weight: 600;
 }
 .Checkout-Right-Div5 {
-    height: 100px;
-    width: 100%;
-    border-bottom: 1px solid rgb(159, 159, 159);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-.Checkout-Right-Img{
-    height: 80px;
-    margin-right: 10px;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.Checkout-Right-Img {
+  height: 80px;
+  margin-right: 10px;
 }
 .Checkout-Right-Div4 {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media only screen and (max-width: 1000px) {
   .Checkout-Left {
     width: 100%;
   }
   .Checkout-Right {
     display: none;
+  }
+  .Checkout-Top-Box {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
