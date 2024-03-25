@@ -131,4 +131,19 @@
     width: 100%;
     margin-bottom: 30px;
   }
+  .Checkout-Right-Div1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .Checkout-Body {
+        padding: 10px;
+      }
+      .Checkout-Text1 {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 }
