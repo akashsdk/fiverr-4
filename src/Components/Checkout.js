@@ -4,11 +4,73 @@ import "./Checkout.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import Img1 from "../Img/Bonsai-1.jpeg";
+import Img2 from "../Img/Cactus1.jpeg";
+import Img3 from "../Img/Indoor1.jpeg";
+
 export default function Checkout() {
   return (
     <div style={{ width: "100%" }}>
       <Header />
-      <div>Checkout</div>
+      <div className="Checkout-Body">
+        <p className="Checkout-Text1">Checkout</p>
+
+        <div className="Checkout-Box">
+          <div className="Checkout-Left">Left Side</div>
+          <div className="Checkout-Right">
+            <p className="Checkout-Text2">Your order</p>
+
+            <div className="Checkout-Right-Div1">
+              <div className="Checkout-Right-Div2">
+                <p className="Checkout-Right-Text1">Product</p>
+                <p className="Checkout-Right-Text1">Subtotal</p>
+              </div>
+
+              <div className="Checkout-Right-Div5">
+                <div className="Checkout-Right-Div4">
+                  <img className="Checkout-Right-Img" src={Img1} alt="" />
+                  <p>Desert Rose × 1</p>
+                </div>
+
+                <p>$26.00</p>
+              </div>
+
+              <div className="Checkout-Right-Div5">
+                <div className="Checkout-Right-Div4">
+                  <img className="Checkout-Right-Img" src={Img2} alt="" />
+                  <p>Grafted Cactus × 1</p>
+                </div>
+
+                <p>$80.00</p>
+              </div>
+
+              <div className="Checkout-Right-Div5">
+                <div className="Checkout-Right-Div4">
+                  <img className="Checkout-Right-Img" src={Img3} alt="" />
+                  <p>Aluminum Plant × 1</p>
+                </div>
+
+                <p>$32.00</p>
+              </div>
+
+              <div className="Checkout-Right-Div2">
+                <p>Subtotal</p>
+                <p>$138.00</p>
+              </div>
+
+              <div className="Checkout-Right-Div2">
+                <p>Shipping Free</p>
+                <p>$50.00</p>
+              </div>
+
+              <div className="Checkout-Right-Div3">
+                <p className="Checkout-Right-Text2">Total</p>
+                <p className="Checkout-Right-Text2">$188.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

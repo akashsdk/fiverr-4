@@ -148,7 +148,7 @@ export default function Header2({ setPage }) {
         </div>
 
         <div className="Header-box2">
-          <Link to="/Home" className="Header-Link">
+          <Link to="/" className="Header-Link">
             <p className="Header-Text">Home</p>
           </Link>
 
@@ -230,7 +230,7 @@ export default function Header2({ setPage }) {
 
       {menuOpen && !isMobile && (
         <div className="Header2-box3-Div">
-          <Link to="/Home" className="Header-Link">
+          <Link to="/" className="Header-Link">
             <p className="Header2-Text">Home</p>
           </Link>
 
