@@ -1,0 +1,59 @@
+.TestimonialCart-Body{
+    height: auto;
+    width: 47%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.TestimonialCart-Body:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.TestimonialCart-Text1{
+    font-size: 20px;
+    width: 95%;
+    text-align: left;
+    opacity: .7;
+    margin-top: 30px;
+}
+.TestimonialCart-Div{
+    width: 95%;
+    display: flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.TestimonialCart-Img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+.TestimonialCart-Text2{
+    font-size: 20px;
+    color: rgb(27, 180, 129);
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .TestimonialCart-Body{
+        height: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .TestimonialCart-Text1{
+        font-size: 18px;
+    }
+}

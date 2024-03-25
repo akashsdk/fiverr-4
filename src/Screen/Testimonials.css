@@ -1,0 +1,42 @@
+.Testimonials-Body {
+  height: auto;
+  width: 100%;
+}
+.Testimonials-Box {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+  color: black;
+}
+.Testimonials-Line {
+  height: 40px;
+}
+.Testimonials-Text {
+  font-size: 20px;
+  color: rgb(27, 180, 129);
+  font-weight: 600;
+}
+.Testimonials-Text2 {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium";
+  font-weight: 600;
+}
+.Testimonials-Div {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+@media only screen and (max-width: 1000px) {
+  .Testimonials-Div {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+    .Testimonials-Text2 {
+        font-size: 25px;
+      }
+  }
