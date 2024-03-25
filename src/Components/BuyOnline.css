@@ -1,0 +1,85 @@
+.Online-Body {
+  height: 500px;
+  width: 100%;
+  background-color: #c5f6d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Online-Img {
+  width: 45%;
+}
+.Online-Div {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Online-Text1 {
+  font-size: 55px;
+  font-family: "Franklin Gothic Medium";
+  color: rgb(27, 180, 129);
+  font-weight: 700;
+}
+.Online-Text2 {
+  font-size: 20px;
+  background-color: black;
+}
+.Online-Div2 {
+  display: flex;
+  margin-top: 50px;
+}
+.Online-Img2 {
+  height: 100px;
+  width: 250px;
+  cursor: pointer;
+}
+.Online-Img3 {
+  height: 80px;
+  width: 220px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  .Online-Body {
+    height: auto;
+    flex-direction: column;
+  }
+  .Online-Img {
+    width: auto;
+    height: 350px;
+    margin-top: 30px;
+  }
+  .Online-Div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Online-Img {
+    height: 250px;
+    margin-top: 30px;
+  }
+  .Online-Text1 {
+    font-size: 30px;
+  }
+  .Online-Text2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .Online-Div2 {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .Online-Img2 {
+    height: 90px;
+    width: 210px;
+  }
+  .Online-Img3 {
+    height: 70px;
+    width: 185px;
+    margin-left: 13px;
+  }
+}
