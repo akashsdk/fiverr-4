@@ -1,0 +1,104 @@
+.ShopCart-Body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgb(248, 248, 248);
+  padding: 50px;
+}
+.ShopCart-Text1 {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium";
+  color: rgb(27, 180, 129);
+  font-weight: 700;
+  margin-top: -20px;
+}
+.ShopCart-Box {
+  width: 100%;
+  display: flex;
+}
+.ShopCart-Left-Box {
+  width: 55%;
+  border: 1px solid rgb(159, 159, 159);
+}
+.ShopCart-Right-Box {
+  width: 40%;
+  margin-left: 5%;
+}
+.ShopCart-Left-Box2 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  padding: 10px;
+}
+.ShopCart-Left-Box3 {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.ShopCart-Left-Text1 {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.ShopCart-Left-Div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ShopCart-Left-Img {
+  height: 80px;
+  margin-right: 10px;
+}
+.ShopCart-Left-Div1 {
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid rgb(159, 159, 159);
+  border-radius: 5px;
+}
+.ShopCart-Left-Icon {
+  font-size: 20px;
+  margin-left: 10px;
+  opacity: 0.7;
+  color: rgb(252, 115, 115);
+}
+.ShopCart-Left-Icon:hover {
+  opacity: 1;
+  color: red;
+}
+.ShopCart-Left-Div3{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .ShopCart-Box {
+        flex-direction: column;
+      }
+
+      .ShopCart-Left-Box {
+        width: 100%;
+      }
+      .ShopCart-Right-Box {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 40px;
+      }
+}
