@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 export default function ShopCart() {
   const handleGoBack = () => {
-    window.history.back(); // Go back using window.history
+    window.history.back(); 
   };
 
   const [cartItems, setCartItems] = useState([

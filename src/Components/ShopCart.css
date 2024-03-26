@@ -18,13 +18,19 @@
     margin-top: -20px;
     cursor: pointer;
 }
+.ShopCart-Top-Icon:hover{
+    font-size: 40px;
+    margin-top: -20px;
+    cursor: pointer;
+    color: rgb(27, 180, 129);
+}
 .ShopCart-Text1 {
   font-size: 50px;
   font-family: "Franklin Gothic Medium";
   color: rgb(27, 180, 129);
   font-weight: 700;
   margin-top: -20px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .ShopCart-Box {
   width: 100%;

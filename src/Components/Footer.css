@@ -62,7 +62,7 @@
   font-size: 25px;
 }
 .Footer-Button:hover {
-  background-color: #fff;
+  background-color: transparent;
   color: rgb(27, 180, 129);
 }
 .Footer-div {
