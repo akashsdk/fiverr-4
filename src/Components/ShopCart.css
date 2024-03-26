@@ -20,12 +20,16 @@
   display: flex;
 }
 .ShopCart-Left-Box {
-  width: 55%;
+  width: 60%;
   border: 1px solid rgb(159, 159, 159);
 }
 .ShopCart-Right-Box {
-  width: 40%;
+  width: 35%;
   margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .ShopCart-Left-Box2 {
   height: 50px;
@@ -87,7 +91,27 @@
     align-items: center;
     padding: 10px;
 }
-
+.ShopCart-Right-Box2{
+    height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgb(159, 159, 159);
+  padding: 10px;
+}
+.ShopCart-Right-Box3{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(159, 159, 159);
+    border-left: 1px solid rgb(159, 159, 159);
+    border-right: 1px solid rgb(159, 159, 159);
+}
 @media only screen and (max-width: 1000px) {
     .ShopCart-Box {
         flex-direction: column;

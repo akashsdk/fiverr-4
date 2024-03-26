@@ -13,6 +13,21 @@ export default function ShopCart() {
     { id: 2, name: "Grafted Cactus", price: 80.0, quantity: 1, image: Img2 },
     { id: 3, name: "Aluminum Plant", price: 32.0, quantity: 1, image: Img3 },
   ]);
+  const [couponVisible, setCouponVisible] = useState(false);
+  const [couponCode, setCouponCode] = useState("");
+  const [totalPrice, setTotalPrice] = useState(calculateTotalPrice(cartItems));
+  const [rightBoxTotal, setRightBoxTotal] = useState(calculateTotalPrice(cartItems));
+
+  function calculateTotalPrice(items) {
+    const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0);
+    let discount = 0;
+    if (couponCode === "greenery") {
+      discount = 10;
+    } else if (couponCode === "greenery20") {
+      discount = 20;
+    }
+    return subtotal - discount;
+  }
 
   const handleIncrement = (id) => {
     const updatedCartItems = cartItems.map((item) => {
@@ -22,6 +37,8 @@ export default function ShopCart() {
       return item;
     });
     setCartItems(updatedCartItems);
+    setTotalPrice(calculateTotalPrice(updatedCartItems));
+    setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
   };
 
   const handleDecrement = (id) => {
@@ -32,17 +49,24 @@ export default function ShopCart() {
       return item;
     });
     setCartItems(updatedCartItems);
+    setTotalPrice(calculateTotalPrice(updatedCartItems));
+    setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
   };
 
   const handleDelete = (id, name) => {
     if (window.confirm(`Are you sure you want to remove ${name} from the cart?`)) {
       const updatedCartItems = cartItems.filter((item) => item.id !== id);
       setCartItems(updatedCartItems);
+      setTotalPrice(calculateTotalPrice(updatedCartItems));
+      setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
     }
   };
 
-  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const applyCoupon = () => {
+    if (couponCode === "greenery" || couponCode === "greenery20") {
+      setRightBoxTotal(calculateTotalPrice(cartItems)); // Update right box total
+    }
+  };
 
   return (
     <div style={{ width: "100%" }}>
@@ -52,11 +76,9 @@ export default function ShopCart() {
         <div className="ShopCart-Box">
           <div className="ShopCart-Left-Box">
             <div className="ShopCart-Left-Box2">
-              <div style={{ width: "10%" }} />
+              <div style={{ width: "10%" }}></div>
               <p className="ShopCart-Left-Text1">Product</p>
-              <p></p>
               <p className="ShopCart-Left-Text1">Price</p>
-              <p></p>
               <p className="ShopCart-Left-Text1">Quantity</p>
               <p className="ShopCart-Left-Text1">Subtotal</p>
             </div>
@@ -81,12 +103,37 @@ export default function ShopCart() {
             ))}
 
             <div className="ShopCart-Left-Div3">
-              <p className="ShopCart-Left-Text1">Total({totalItems})</p>
+              <p className="ShopCart-Left-Text1">Total({cartItems.reduce((total, item) => total + item.quantity, 0)})</p>
               <p className="ShopCart-Left-Text1">${totalPrice.toFixed(2)}</p>
             </div>
           </div>
 
-          <div className="ShopCart-Right-Box">Right side</div>
+          <div className="ShopCart-Right-Box">
+            <div className="ShopCart-Right-Box2">
+              <p className="ShopCart-Left-Text1">Cart Totals</p>
+            </div>
+            <div className="ShopCart-Right-Box3">
+              <p>Subtotal</p>
+              <p>{cartItems.reduce((total, item) => total + item.quantity, 0)} Item</p>
+            </div>
+            <div className="ShopCart-Right-Box3">
+              <p>Total </p>
+              <p>$ {rightBoxTotal}.00 </p>
+            </div>
+
+            <p onClick={() => setCouponVisible(!couponVisible)}>Have a coupon?</p>
+
+            {couponVisible && (
+              <div>
+                <input value={couponCode} onChange={(e) => setCouponCode(e.target.value)} placeholder="Enter coupon code" />
+                <button onClick={applyCoupon}>Apply</button>
+              </div>
+            )}
+
+            <div>
+              <p className="ShopCart-Left-Text1">Check Out</p>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
