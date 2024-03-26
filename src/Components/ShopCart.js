@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import "./ShopCart.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import { DeleteOutlined, MinusOutlined, PlusOutlined } from "@ant-design/icons";
+import {
+  DeleteOutlined,
+  MinusOutlined,
+  PlusOutlined,
+  ArrowLeftOutlined,
+} from "@ant-design/icons";
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
 
+import { Link } from "react-router-dom";
+
 export default function ShopCart() {
+  const handleGoBack = () => {
+    window.history.back(); // Go back using window.history
+  };
+
   const [cartItems, setCartItems] = useState([
     { id: 1, name: "Desert Rose", price: 26.0, quantity: 1, image: Img1 },
     { id: 2, name: "Grafted Cactus", price: 80.0, quantity: 1, image: Img2 },
@@ -29,7 +40,7 @@ export default function ShopCart() {
     let discount = 0;
     if (couponCode === "greenery") {
       discount = 10;
-    } else if (couponCode === "greenery20") {
+    } else if (couponCode === "akash") {
       discount = 20;
     }
     return subtotal - discount;
@@ -44,7 +55,7 @@ export default function ShopCart() {
     });
     setCartItems(updatedCartItems);
     setTotalPrice(calculateTotalPrice(updatedCartItems));
-    setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
+    setRightBoxTotal(calculateTotalPrice(updatedCartItems));
   };
 
   const handleDecrement = (id) => {
@@ -56,7 +67,7 @@ export default function ShopCart() {
     });
     setCartItems(updatedCartItems);
     setTotalPrice(calculateTotalPrice(updatedCartItems));
-    setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
+    setRightBoxTotal(calculateTotalPrice(updatedCartItems));
   };
 
   const handleDelete = (id, name) => {
@@ -66,16 +77,16 @@ export default function ShopCart() {
       const updatedCartItems = cartItems.filter((item) => item.id !== id);
       setCartItems(updatedCartItems);
       setTotalPrice(calculateTotalPrice(updatedCartItems));
-      setRightBoxTotal(calculateTotalPrice(updatedCartItems)); // Update right box total
+      setRightBoxTotal(calculateTotalPrice(updatedCartItems));
     }
   };
 
   const applyCoupon = () => {
-    if (couponCode === "greenery" || couponCode === "greenery20") {
-      setRightBoxTotal(calculateTotalPrice(cartItems)); // Update right box total
-      setCouponError(false); // Reset coupon error if coupon is correct
+    if (couponCode === "greenery" || couponCode === "akash") {
+      setRightBoxTotal(calculateTotalPrice(cartItems));
+      setCouponError(false);
     } else {
-      setCouponError(true); // Set coupon error if coupon is incorrect
+      setCouponError(true);
     }
   };
 
@@ -83,7 +94,13 @@ export default function ShopCart() {
     <div style={{ width: "100%" }}>
       <Header />
       <div className="ShopCart-Body">
-        <p className="ShopCart-Text1">Cart</p>
+        <div className="ShopCart-Top-Box">
+          <ArrowLeftOutlined
+            className="ShopCart-Top-Icon"
+            onClick={handleGoBack}
+          />
+          <p className="ShopCart-Text1">Cart</p>
+        </div>
         <div className="ShopCart-Box">
           <div className="ShopCart-Left-Box">
             <div className="ShopCart-Left-Box2">
@@ -159,20 +176,27 @@ export default function ShopCart() {
             </p>
 
             {couponVisible && (
-              <div style={{width:'100%'}}>
+              <div style={{ width: "100%" }}>
                 <div className="ShopCart-Right-Box4">
                   <input
-                  className="ShopCart-Right-Input"
+                    className="ShopCart-Right-Input"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
                     placeholder="Enter coupon code"
                   />
-                  <button className="ShopCart-Right-Button" onClick={applyCoupon}>Apply</button>
+                  <button
+                    className="ShopCart-Right-Button"
+                    onClick={applyCoupon}
+                  >
+                    Apply
+                  </button>
                 </div>
                 {couponError ? (
                   <p style={{ color: "red" }}>
                     {" "}
-                    Your coupon '{couponCode}' does not exist!
+                    Your coupon does not exist!
+                    <br />
+                    Plz Apply 'greenery' or 'akash'.
                   </p>
                 ) : (
                   <p></p>
@@ -180,9 +204,9 @@ export default function ShopCart() {
               </div>
             )}
 
-            <div>
-              <p className="ShopCart-Left-Text1">Check Out</p>
-            </div>
+            <Link to="/Checkout" className="ShopCart-Right-Link">
+              <p>Check Out</p>
+            </Link>
           </div>
         </div>
       </div>
