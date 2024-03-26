@@ -16,10 +16,16 @@ export default function ShopCart() {
   const [couponVisible, setCouponVisible] = useState(false);
   const [couponCode, setCouponCode] = useState("");
   const [totalPrice, setTotalPrice] = useState(calculateTotalPrice(cartItems));
-  const [rightBoxTotal, setRightBoxTotal] = useState(calculateTotalPrice(cartItems));
+  const [rightBoxTotal, setRightBoxTotal] = useState(
+    calculateTotalPrice(cartItems)
+  );
+  const [couponError, setCouponError] = useState(false);
 
   function calculateTotalPrice(items) {
-    const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0);
+    const subtotal = items.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
     let discount = 0;
     if (couponCode === "greenery") {
       discount = 10;
@@ -54,7 +60,9 @@ export default function ShopCart() {
   };
 
   const handleDelete = (id, name) => {
-    if (window.confirm(`Are you sure you want to remove ${name} from the cart?`)) {
+    if (
+      window.confirm(`Are you sure you want to remove ${name} from the cart?`)
+    ) {
       const updatedCartItems = cartItems.filter((item) => item.id !== id);
       setCartItems(updatedCartItems);
       setTotalPrice(calculateTotalPrice(updatedCartItems));
@@ -65,6 +73,9 @@ export default function ShopCart() {
   const applyCoupon = () => {
     if (couponCode === "greenery" || couponCode === "greenery20") {
       setRightBoxTotal(calculateTotalPrice(cartItems)); // Update right box total
+      setCouponError(false); // Reset coupon error if coupon is correct
+    } else {
+      setCouponError(true); // Set coupon error if coupon is incorrect
     }
   };
 
@@ -86,7 +97,11 @@ export default function ShopCart() {
             {cartItems.map((item) => (
               <div className="ShopCart-Left-Box3" key={item.id}>
                 <div className="ShopCart-Left-Div2">
-                  <img className="ShopCart-Left-Img" src={item.image} alt={item.name} />
+                  <img
+                    className="ShopCart-Left-Img"
+                    src={item.image}
+                    alt={item.name}
+                  />
                   <p>{item.name}</p>
                 </div>
                 <p>${item.price.toFixed(2)}</p>
@@ -97,13 +112,19 @@ export default function ShopCart() {
                 </div>
                 <div className="ShopCart-Left-Div2">
                   <p>${(item.price * item.quantity).toFixed(2)}</p>
-                  <DeleteOutlined className="ShopCart-Left-Icon" onClick={() => handleDelete(item.id, item.name)} />
+                  <DeleteOutlined
+                    className="ShopCart-Left-Icon"
+                    onClick={() => handleDelete(item.id, item.name)}
+                  />
                 </div>
               </div>
             ))}
 
             <div className="ShopCart-Left-Div3">
-              <p className="ShopCart-Left-Text1">Total({cartItems.reduce((total, item) => total + item.quantity, 0)})</p>
+              <p className="ShopCart-Left-Text1">
+                Total(
+                {cartItems.reduce((total, item) => total + item.quantity, 0)})
+              </p>
               <p className="ShopCart-Left-Text1">${totalPrice.toFixed(2)}</p>
             </div>
           </div>
@@ -112,21 +133,50 @@ export default function ShopCart() {
             <div className="ShopCart-Right-Box2">
               <p className="ShopCart-Left-Text1">Cart Totals</p>
             </div>
+
             <div className="ShopCart-Right-Box3">
               <p>Subtotal</p>
-              <p>{cartItems.reduce((total, item) => total + item.quantity, 0)} Item</p>
+              <p>
+                {cartItems.reduce((total, item) => total + item.quantity, 0)}{" "}
+                Item
+              </p>
             </div>
+
             <div className="ShopCart-Right-Box3">
               <p>Total </p>
               <p>$ {rightBoxTotal}.00 </p>
             </div>
 
-            <p onClick={() => setCouponVisible(!couponVisible)}>Have a coupon?</p>
+            <p
+              style={{
+                color: couponError ? "red" : "rgb(27, 180, 129)",
+                cursor: "pointer",
+                marginTop: "25px",
+              }}
+              onClick={() => setCouponVisible(!couponVisible)}
+            >
+              Have a coupon?
+            </p>
 
             {couponVisible && (
-              <div>
-                <input value={couponCode} onChange={(e) => setCouponCode(e.target.value)} placeholder="Enter coupon code" />
-                <button onClick={applyCoupon}>Apply</button>
+              <div style={{width:'100%'}}>
+                <div className="ShopCart-Right-Box4">
+                  <input
+                  className="ShopCart-Right-Input"
+                    value={couponCode}
+                    onChange={(e) => setCouponCode(e.target.value)}
+                    placeholder="Enter coupon code"
+                  />
+                  <button className="ShopCart-Right-Button" onClick={applyCoupon}>Apply</button>
+                </div>
+                {couponError ? (
+                  <p style={{ color: "red" }}>
+                    {" "}
+                    Your coupon '{couponCode}' does not exist!
+                  </p>
+                ) : (
+                  <p></p>
+                )}
               </div>
             )}
 

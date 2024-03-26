@@ -112,6 +112,32 @@
     border-left: 1px solid rgb(159, 159, 159);
     border-right: 1px solid rgb(159, 159, 159);
 }
+.ShopCart-Right-Box4{
+    width: 100%;
+    margin-top: 30px;
+}
+.ShopCart-Right-Input{
+    width: 80%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+.ShopCart-Right-Input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: red;
+    margin-left: 20px;
+  }
+  
+.ShopCart-Right-Button{
+    width: 20%;
+    height: 40px;
+    background-color: rgb(27, 180, 129);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
 @media only screen and (max-width: 1000px) {
     .ShopCart-Box {
         flex-direction: column;
