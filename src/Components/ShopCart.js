@@ -104,8 +104,9 @@ export default function ShopCart() {
         <div className="ShopCart-Box">
           <div className="ShopCart-Left-Box">
             <div className="ShopCart-Left-Box2">
-              <div style={{ width: "10%" }}></div>
+              <div className="ShopCart-Box-Spech"></div>
               <p className="ShopCart-Left-Text1">Product</p>
+              <div className="ShopCart-Box-Spech2"></div>
               <p className="ShopCart-Left-Text1">Price</p>
               <p className="ShopCart-Left-Text1">Quantity</p>
               <p className="ShopCart-Left-Text1">Subtotal</p>
