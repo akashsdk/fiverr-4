@@ -12,7 +12,6 @@ import {
   EyeInvisibleOutlined,
 } from "@ant-design/icons";
 
-import { Select } from "antd";
 import countryOptions from "../Data/countries.json";
 
 import Img1 from "../Img/Bonsai-1.jpeg";
@@ -94,7 +93,6 @@ export default function Checkout() {
   };
 
   //Street Address
-
   const [selectedCountry2, setSelectedCountry2] = useState("");
 
   const handleChange2 = (selectedOption) => {
