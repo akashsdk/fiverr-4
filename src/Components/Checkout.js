@@ -12,6 +12,9 @@ import {
   EyeInvisibleOutlined,
 } from "@ant-design/icons";
 
+import { Select } from "antd";
+import countryOptions from "../Data/countries.json";
+
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
@@ -81,6 +84,42 @@ export default function Checkout() {
   const [inputValue4, setInputValue4] = useState("");
   const handleInputChange4 = (event) => {
     setInputValue4(event.target.value);
+  };
+
+  //Country / Region
+  const [selectedCountry, setSelectedCountry] = useState("");
+
+  const handleChange = (selectedOption) => {
+    setSelectedCountry(selectedOption);
+  };
+
+  //Street Address
+
+  const [selectedCountry2, setSelectedCountry2] = useState("");
+
+  const handleChange2 = (selectedOption) => {
+    setSelectedCountry2(selectedOption);
+  };
+
+  //Town / City
+  const [selectedCountry3, setSelectedCountry3] = useState("");
+
+  const handleChange3 = (selectedOption) => {
+    setSelectedCountry3(selectedOption);
+  };
+
+  //District
+  const [selectedCountry4, setSelectedCountry4] = useState("");
+
+  const handleChange4 = (selectedOption) => {
+    setSelectedCountry4(selectedOption);
+  };
+
+  //Postcode / ZIP
+  const [selectedCountry5, setSelectedCountry5] = useState("");
+
+  const handleChange5 = (selectedOption) => {
+    setSelectedCountry5(selectedOption);
   };
   return (
     <div style={{ width: "100%" }}>
@@ -186,13 +225,6 @@ export default function Checkout() {
                 className="password-input"
                 placeholder="Username or Email Address*"
               />
-              <p
-                className={`input-label ${
-                  inputValue1.length > 0 ? "active" : ""
-                }`}
-              >
-                Username or Email
-              </p>
             </div>
 
             {showLoginInfo && (
@@ -302,7 +334,127 @@ export default function Checkout() {
               </p>
             </div>
 
-            <div>hhhh</div>
+            <div className="password-input-container">
+              <select
+                value={selectedCountry}
+                onChange={handleChange}
+                className={`Checkout-Select ${selectedCountry ? "active" : ""}`}
+              >
+                <option value="" disabled>
+                  Country / Region*
+                </option>
+                {countryOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <label
+                className={`input-label ${selectedCountry ? "active" : ""}`}
+              >
+                Country / Region
+              </label>
+            </div>
+
+            <div className="Checkout-Left-Box2">
+              <div className="Checkout-Left-Box3">
+                <select
+                  value={selectedCountry2}
+                  onChange={handleChange2}
+                  className={`Checkout-Select ${
+                    selectedCountry ? "active" : ""
+                  }`}
+                >
+                  <option value="" disabled>
+                    Street Address*
+                  </option>
+                  {countryOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <label
+                  className={`input-label ${selectedCountry2 ? "active" : ""}`}
+                >
+                  Street Address
+                </label>
+              </div>
+
+              <div className="Checkout-Left-Box3">
+                <select
+                  value={selectedCountry3}
+                  onChange={handleChange3}
+                  className={`Checkout-Select ${
+                    selectedCountry3 ? "active" : ""
+                  }`}
+                >
+                  <option value="" disabled>
+                    Town / City*
+                  </option>
+                  {countryOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <label
+                  className={`input-label ${selectedCountry3 ? "active" : ""}`}
+                >
+                  Town / City
+                </label>
+              </div>
+            </div>
+
+            <div className="Checkout-Left-Box2">
+              <div className="Checkout-Left-Box3">
+                <select
+                  value={selectedCountry4}
+                  onChange={handleChange4}
+                  className={`Checkout-Select ${
+                    selectedCountry ? "active" : ""
+                  }`}
+                >
+                  <option value="" disabled>
+                    District*
+                  </option>
+                  {countryOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <label
+                  className={`input-label ${selectedCountry4 ? "active" : ""}`}
+                >
+                  District
+                </label>
+              </div>
+
+              <div className="Checkout-Left-Box3">
+                <select
+                  value={selectedCountry5}
+                  onChange={handleChange5}
+                  className={`Checkout-Select ${
+                    selectedCountry5 ? "active" : ""
+                  }`}
+                >
+                  <option value="" disabled>
+                    Postcode / ZIP
+                  </option>
+                  {countryOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <label
+                  className={`input-label ${selectedCountry5 ? "active" : ""}`}
+                >
+                  Postcode / ZIP
+                </label>
+              </div>
+            </div>
           </div>
 
           <div className="Checkout-Right">

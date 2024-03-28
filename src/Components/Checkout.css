@@ -156,16 +156,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .Checkout-Left-Box3 {
   width: 45%;
   position: relative;
-  margin-bottom: 20px;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.Checkout-Select{
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+  border-radius: 5px; 
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  opacity: .6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
