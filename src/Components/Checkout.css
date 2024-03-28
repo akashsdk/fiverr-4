@@ -55,10 +55,105 @@
   justify-content: center;
   align-items: flex-start;
 }
+/* Left-Side */
 .Checkout-Left {
   width: 55%;
-  background-color: aqua;
 }
+.Checkout-Left-Box1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Checkout-Left-Text1{
+  font-size: 20px;
+  font-weight: 600;
+  opacity: .7;
+}
+.Checkout-Left-Line{
+  height: 1px;
+  width: 100%;
+  background-color: rgb(182, 182, 182);
+}
+.Checkout-Left-Button{
+  color: rgb(27, 180, 129);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Checkout-Left-Button2{
+  height: 50px;
+  width: 130px;
+  background-color: rgb(27, 180, 129);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+}
+.Checkout-Left-Button2:hover{
+  background-color: #fff;
+  color: rgb(27, 180, 129);
+}
+
+
+
+
+.password-input-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-label {
+  display: none;
+  
+}
+
+.input-label.active {
+  display: block;
+  top: -14px;
+  margin-left: 30px;
+  position: absolute;
+  color: rgb(27, 180, 129);
+  font-size: 18px;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease;
+  background-color: #fff;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.Checkout-Left-Icon{
+  font-size: 20px;
+  opacity: .6;
+}
+.Checkout-Left-Icon:hover{
+  opacity: 1;
+}
+
+
+
+
+
 
 /* Right-Side */
 .Checkout-Right {

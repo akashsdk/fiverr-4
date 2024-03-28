@@ -4,7 +4,13 @@ import "./Checkout.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
-import { DownOutlined, UpOutlined, ArrowLeftOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  UpOutlined,
+  ArrowLeftOutlined,
+  EyeOutlined,
+  EyeInvisibleOutlined,
+} from "@ant-design/icons";
 
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
@@ -34,11 +40,32 @@ export default function Checkout() {
     };
   }, []);
 
+  //showLoginInfo
+  const [showLoginInfo, setShowLoginInfo] = useState(false);
+
+  const toggleLoginInfo = () => {
+    setShowLoginInfo(!showLoginInfo);
+  };
+  //Input
+  const [showPassword, setShowPassword] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword); // Toggle password visibility
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value); // Password
+  };
+
+  const [inputValue1, setInputValue1] = useState("");
+  const handleInputChange1 = (event) => {
+    setInputValue1(event.target.value); // Username or Email Address
+  };
   return (
     <div style={{ width: "100%" }}>
       <Header />
       <div className="Checkout-Body">
-        
         <div className="ShopCart-Top-Box">
           <ArrowLeftOutlined
             className="ShopCart-Top-Icon"
@@ -119,11 +146,94 @@ export default function Checkout() {
         <div className="Checkout-Box">
           <div className="Checkout-Left">
             <p className="Checkout-Text2">Customer information</p>
+
+            <div className="Checkout-Left-Box1">
+              <p className="Checkout-Left-Text1">Already have an account?</p>
+              <button
+                className="Checkout-Left-Button"
+                onClick={toggleLoginInfo}
+              >
+                Log in
+              </button>
+            </div>
+            <div className="Checkout-Left-Line"/>
+
+            <div className="password-input-container">
+              <input
+                type="email"
+                value={inputValue1}
+                onChange={handleInputChange1}
+                className="password-input"
+                placeholder="Username or Email Address*"
+              />
+              <p
+                className={`input-label ${
+                  inputValue1.length > 0 ? "active" : ""
+                }`}
+              >
+                Username or Email
+              </p>
+            </div>
+
+            {showLoginInfo && (
+              <div style={{ width: "100%" }}>
+                <div className="password-input-container">
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      value={inputValue}
+                      onChange={handleInputChange}
+                      className="password-input"
+                      placeholder="Enter your password"
+                    />
+                    <span
+                      className="password-toggle-icon"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? (
+                        <EyeOutlined className="Checkout-Left-Icon" />
+                      ) : (
+                        <EyeInvisibleOutlined className="Checkout-Left-Icon" />
+                      )}
+                    </span>
+                  </div>
+                  <p
+                    className={`input-label ${
+                      inputValue.length > 0 ? "active" : ""
+                    }`}
+                  >
+                    Password
+                  </p>
+                </div>
+
+                <div className="Checkout-Left-Box1">
+                  <button className="Checkout-Left-Button2">LogIn</button>
+
+                  <button
+                    className="Checkout-Left-Button"
+                    onClick={toggleLoginInfo}
+                  >
+                    Lost Your Password?
+                  </button>
+                </div>
+                <div className="Checkout-Left-Box1">
+                  <p style={{ opacity: ".7", marginBottom:'10px' }}>
+                    Login is optional, you can continue with your order below.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            <div className="Checkout-Left-Box1">
+              <p className="Checkout-Left-Text1">Billing details</p>
+            </div>
+            <div className="Checkout-Left-Line"/>
           </div>
 
           <div className="Checkout-Right">
             <p className="Checkout-Text2">Your order</p>
-
+            <div className="Checkout-Left-Line"/>
+            
             <div className="Checkout-Right-Div1">
               <div className="Checkout-Right-Div2">
                 <p className="Checkout-Right-Text1">Product</p>
