@@ -28,7 +28,7 @@
   display: none;
 }
 .Checkout-Top-Button {
-    height: 70px;
+  height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -37,16 +37,11 @@
   padding: 10px;
   border-radius: 5px;
 }
-.Checkout-Top-Icon{
-    margin-left: 5px;
-    font-size: 20px;
-    margin-top: 5px;
+.Checkout-Top-Icon {
+  margin-left: 5px;
+  font-size: 20px;
+  margin-top: 5px;
 }
-
-
-
-
-
 
 /* Box */
 .Checkout-Box {
@@ -63,28 +58,28 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.Checkout-Left-Box1{
+.Checkout-Left-Box1 {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.Checkout-Left-Text1{
+.Checkout-Left-Text1 {
   font-size: 20px;
   font-weight: 600;
-  opacity: .7;
+  opacity: 0.7;
 }
-.Checkout-Left-Line{
+.Checkout-Left-Line {
   height: 1px;
   width: 100%;
   background-color: rgb(182, 182, 182);
 }
-.Checkout-Left-Button{
+.Checkout-Left-Button {
   color: rgb(27, 180, 129);
   font-size: 20px;
   font-weight: 600;
 }
 
-.Checkout-Left-Button2{
+.Checkout-Left-Button2 {
   height: 50px;
   width: 130px;
   background-color: rgb(27, 180, 129);
@@ -94,13 +89,10 @@
   color: #fff;
   border: 2px solid rgb(27, 180, 129);
 }
-.Checkout-Left-Button2:hover{
+.Checkout-Left-Button2:hover {
   background-color: #fff;
   color: rgb(27, 180, 129);
 }
-
-
-
 
 .password-input-container {
   width: 100%;
@@ -111,7 +103,6 @@
 
 .input-label {
   display: none;
-  
 }
 
 .input-label.active {
@@ -140,7 +131,6 @@
   border: 2px solid rgb(27, 180, 129);
 }
 
-
 .password-toggle-icon {
   position: absolute;
   top: 50%;
@@ -148,19 +138,18 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.Checkout-Left-Icon{
+.Checkout-Left-Icon {
   font-size: 20px;
-  opacity: .6;
+  opacity: 0.6;
 }
-.Checkout-Left-Icon:hover{
+.Checkout-Left-Icon:hover {
   opacity: 1;
 }
-.Checkout-Left-Box2{
+.Checkout-Left-Box2 {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .Checkout-Left-Box3 {
   width: 45%;
@@ -170,33 +159,17 @@
   justify-content: space-between;
   align-items: center;
 }
-.Checkout-Select{
+.Checkout-Select {
   height: 50px;
   width: 100%;
   background-color: #fff;
   border: 2px solid rgb(27, 180, 129);
-  border-radius: 5px; 
+  border-radius: 5px;
   box-sizing: border-box;
   padding: 10px;
   outline: none;
-  opacity: .6;
+  opacity: 0.6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Right-Side */
 .Checkout-Right {
@@ -277,12 +250,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .Checkout-Body {
-        padding: 10px;
-      }
-      .Checkout-Text1 {
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+  .Checkout-Body {
+    padding: 10px;
+  }
+  .Checkout-Text1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
