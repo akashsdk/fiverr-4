@@ -121,6 +121,20 @@ export default function Checkout() {
   const handleChange5 = (selectedOption) => {
     setSelectedCountry5(selectedOption);
   };
+
+  //Phone
+  const [inputValue5, setInputValue5] = useState("");
+
+  const handleInputChange5 = (event) => {
+    setInputValue5(event.target.value);
+  };
+
+  //Other information
+  const [inputValue6, setInputValue6] = useState("");
+
+  const handleInputChange6 = (event) => {
+    setInputValue6(event.target.value);
+  };
   return (
     <div style={{ width: "100%" }}>
       <Header />
@@ -323,7 +337,7 @@ export default function Checkout() {
                 value={inputValue4}
                 onChange={handleInputChange4}
                 className="password-input"
-                placeholder="Company name"
+                placeholder="Company name (Optional)"
               />
               <p
                 className={`input-label ${
@@ -440,7 +454,7 @@ export default function Checkout() {
                   }`}
                 >
                   <option value="" disabled>
-                    Postcode / ZIP
+                    Postcode / ZIP (Optional)
                   </option>
                   {countryOptions.map((option) => (
                     <option key={option.value} value={option.value}>
@@ -455,6 +469,46 @@ export default function Checkout() {
                 </label>
               </div>
             </div>
+
+            <div className="password-input-container">
+              <input
+                type="phone"
+                value={inputValue5}
+                onChange={handleInputChange5}
+                className="password-input"
+                placeholder="Phone*"
+              />
+              <p
+                className={`input-label ${
+                  inputValue5.length > 0 ? "active" : ""
+                }`}
+              >
+                Phone
+              </p>
+            </div>
+
+            <div className="Checkout-Left-Box1">
+              <p className="Checkout-Left-Text1">Additional information</p>
+            </div>
+            <div className="Checkout-Left-Line" />
+
+            <div className="password-input-container">
+              <input
+                type="phone"
+                value={inputValue6}
+                onChange={handleInputChange6}
+                className="password-input"
+                placeholder="Other information (Optional)"
+              />
+              <p
+                className={`input-label ${
+                  inputValue6.length > 0 ? "active" : ""
+                }`}
+              >
+                Other information
+              </p>
+            </div>
+
           </div>
 
           <div className="Checkout-Right">
