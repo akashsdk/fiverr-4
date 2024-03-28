@@ -99,6 +99,7 @@
 
 
 .password-input-container {
+  width: 100%;
   position: relative;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -135,6 +136,7 @@
   border: 2px solid rgb(27, 180, 129);
 }
 
+
 .password-toggle-icon {
   position: absolute;
   top: 50%;
@@ -149,9 +151,21 @@
 .Checkout-Left-Icon:hover{
   opacity: 1;
 }
-
-
-
+.Checkout-Left-Box2{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Checkout-Left-Box3 {
+  width: 45%;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 

@@ -47,20 +47,40 @@ export default function Checkout() {
     setShowLoginInfo(!showLoginInfo);
   };
   //Input
+  // Password
   const [showPassword, setShowPassword] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword); // Toggle password visibility
+    setShowPassword(!showPassword);
   };
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value); // Password
+    setInputValue(event.target.value);
   };
 
+  // Username or Email Address
   const [inputValue1, setInputValue1] = useState("");
   const handleInputChange1 = (event) => {
-    setInputValue1(event.target.value); // Username or Email Address
+    setInputValue1(event.target.value);
+  };
+
+  // First Name
+  const [inputValue2, setInputValue2] = useState("");
+  const handleInputChange2 = (event) => {
+    setInputValue2(event.target.value);
+  };
+
+  // Last Name
+  const [inputValue3, setInputValue3] = useState("");
+  const handleInputChange3 = (event) => {
+    setInputValue3(event.target.value);
+  };
+
+  //Company name
+  const [inputValue4, setInputValue4] = useState("");
+  const handleInputChange4 = (event) => {
+    setInputValue4(event.target.value);
   };
   return (
     <div style={{ width: "100%" }}>
@@ -156,7 +176,7 @@ export default function Checkout() {
                 Log in
               </button>
             </div>
-            <div className="Checkout-Left-Line"/>
+            <div className="Checkout-Left-Line" />
 
             <div className="password-input-container">
               <input
@@ -217,7 +237,7 @@ export default function Checkout() {
                   </button>
                 </div>
                 <div className="Checkout-Left-Box1">
-                  <p style={{ opacity: ".7", marginBottom:'10px' }}>
+                  <p style={{ opacity: ".7", marginBottom: "10px" }}>
                     Login is optional, you can continue with your order below.
                   </p>
                 </div>
@@ -227,13 +247,68 @@ export default function Checkout() {
             <div className="Checkout-Left-Box1">
               <p className="Checkout-Left-Text1">Billing details</p>
             </div>
-            <div className="Checkout-Left-Line"/>
+            <div className="Checkout-Left-Line" />
+
+            <div className="Checkout-Left-Box2">
+              <div className="Checkout-Left-Box3">
+                <input
+                  type="email"
+                  value={inputValue2}
+                  onChange={handleInputChange2}
+                  className="password-input"
+                  placeholder="First Name*"
+                />
+                <p
+                  className={`input-label ${
+                    inputValue2.length > 0 ? "active" : ""
+                  }`}
+                >
+                  First Name
+                </p>
+              </div>
+
+              <div className="Checkout-Left-Box3">
+                <input
+                  type="email"
+                  value={inputValue3}
+                  onChange={handleInputChange3}
+                  className="password-input"
+                  placeholder="Last Name*"
+                />
+                <p
+                  className={`input-label ${
+                    inputValue3.length > 0 ? "active" : ""
+                  }`}
+                >
+                  Last Name
+                </p>
+              </div>
+            </div>
+
+            <div className="password-input-container">
+              <input
+                type="email"
+                value={inputValue4}
+                onChange={handleInputChange4}
+                className="password-input"
+                placeholder="Company name"
+              />
+              <p
+                className={`input-label ${
+                  inputValue4.length > 0 ? "active" : ""
+                }`}
+              >
+                Company name
+              </p>
+            </div>
+
+            <div>hhhh</div>
           </div>
 
           <div className="Checkout-Right">
             <p className="Checkout-Text2">Your order</p>
-            <div className="Checkout-Left-Line"/>
-            
+            <div className="Checkout-Left-Line" />
+
             <div className="Checkout-Right-Div1">
               <div className="Checkout-Right-Div2">
                 <p className="Checkout-Right-Text1">Product</p>
