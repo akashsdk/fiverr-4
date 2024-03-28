@@ -1,0 +1,261 @@
+/* ok */
+
+.Checkout-Body {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgb(248, 248, 248);
+  padding: 50px;
+}
+.Checkout-Text1 {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium";
+  color: rgb(27, 180, 129);
+  font-weight: 700;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.Checkout-Text2 {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium";
+  font-weight: 600;
+}
+/* Top-Box */
+.Checkout-Top-Box {
+  display: none;
+}
+.Checkout-Top-Button {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(159, 159, 159);
+  padding: 10px;
+  border-radius: 5px;
+}
+.Checkout-Top-Icon {
+  margin-left: 5px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* Box */
+.Checkout-Box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* Left-Side */
+.Checkout-Left {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Checkout-Left-Box1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Checkout-Left-Text1 {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.Checkout-Left-Line {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(182, 182, 182);
+}
+.Checkout-Left-Button {
+  color: rgb(27, 180, 129);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Checkout-Left-Button2 {
+  height: 50px;
+  width: 130px;
+  background-color: rgb(27, 180, 129);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+}
+.Checkout-Left-Button2:hover {
+  background-color: #fff;
+  color: rgb(27, 180, 129);
+}
+
+.password-input-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-label {
+  display: none;
+}
+
+.input-label.active {
+  display: block;
+  top: -14px;
+  margin-left: 30px;
+  position: absolute;
+  color: rgb(27, 180, 129);
+  font-size: 18px;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease;
+  background-color: #fff;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.Checkout-Left-Icon {
+  font-size: 20px;
+  opacity: 0.6;
+}
+.Checkout-Left-Icon:hover {
+  opacity: 1;
+}
+.Checkout-Left-Box2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Checkout-Left-Box3 {
+  width: 45%;
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Checkout-Select {
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid rgb(27, 180, 129);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  opacity: 0.6;
+}
+
+/* Right-Side */
+.Checkout-Right {
+  width: 40%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.Checkout-Right-Div1 {
+  width: 100%;
+  margin-top: 30px;
+  border: 1px solid rgb(159, 159, 159);
+  border-radius: 5px;
+}
+.Checkout-Right-Div2 {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.Checkout-Right-Text1 {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.Checkout-Right-Div3 {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.Checkout-Right-Text2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.Checkout-Right-Div5 {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.Checkout-Right-Img {
+  height: 80px;
+  margin-right: 10px;
+}
+.Checkout-Right-Div4 {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+  .Checkout-Left {
+    width: 100%;
+  }
+  .Checkout-Right {
+    display: none;
+  }
+  .Checkout-Top-Box {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .Checkout-Right-Div1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Checkout-Body {
+    padding: 10px;
+  }
+  .Checkout-Text1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
