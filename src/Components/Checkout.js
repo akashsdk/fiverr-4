@@ -48,6 +48,14 @@ export default function Checkout() {
   const toggleLoginInfo = () => {
     setShowLoginInfo(!showLoginInfo);
   };
+
+  // Add Coupon
+  const [showCoupon, setAddCoupon] = useState(false);
+
+  const setShowCoupon = () => {
+    setAddCoupon(!showCoupon);
+  };
+
   //Input
   // Password
   const [showPassword, setShowPassword] = useState(false);
@@ -113,11 +121,11 @@ export default function Checkout() {
     setSelectedCountry4(selectedOption);
   };
 
-  //Postcode / ZIP
-  const [selectedCountry5, setSelectedCountry5] = useState("");
+  //Postcode / ZIP Code
+  const [inputValue7, setInputValue7] = useState("");
 
-  const handleChange5 = (selectedOption) => {
-    setSelectedCountry5(selectedOption);
+  const handleInputChange7 = (event) => {
+    setInputValue7(event.target.value);
   };
 
   //Phone
@@ -132,6 +140,13 @@ export default function Checkout() {
 
   const handleInputChange6 = (event) => {
     setInputValue6(event.target.value);
+  };
+
+  //Coupon Code
+  const [inputValue8, setInputValue8] = useState("");
+
+  const handleInputChange8 = (event) => {
+    setInputValue8(event.target.value);
   };
   return (
     <div style={{ width: "100%" }}>
@@ -444,27 +459,20 @@ export default function Checkout() {
               </div>
 
               <div className="Checkout-Left-Box3">
-                <select
-                  value={selectedCountry5}
-                  onChange={handleChange5}
-                  className={`Checkout-Select ${
-                    selectedCountry5 ? "active" : ""
+                <input
+                  type="email"
+                  value={inputValue7}
+                  onChange={handleInputChange7}
+                  className="password-input"
+                  placeholder="Postcode / ZIP (Optional)"
+                />
+                <p
+                  className={`input-label ${
+                    inputValue7.length > 0 ? "active" : ""
                   }`}
                 >
-                  <option value="" disabled>
-                    Postcode / ZIP (Optional)
-                  </option>
-                  {countryOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-                <label
-                  className={`input-label ${selectedCountry5 ? "active" : ""}`}
-                >
                   Postcode / ZIP
-                </label>
+                </p>
               </div>
             </div>
 
@@ -507,6 +515,32 @@ export default function Checkout() {
               </p>
             </div>
 
+            <button className="Checkout-coupon-Button" onClick={setShowCoupon}>
+              Have a coupon?
+            </button>
+
+            {showCoupon && (
+              <div className="Checkout-coupon-Box">
+                <div className="password-input-container">
+                  <input
+                    type="phone"
+                    value={inputValue8}
+                    onChange={handleInputChange8}
+                    className="password-input"
+                    placeholder="Coupon Code"
+                  />
+                  <p
+                    className={`input-label ${
+                      inputValue8.length > 0 ? "active" : ""
+                    }`}
+                  >
+                    Coupon Code
+                  </p>
+                </div>
+
+                <button className="Checkout-coupon-Button2"> Apply</button>
+              </div>
+            )}
           </div>
 
           <div className="Checkout-Right">
