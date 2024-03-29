@@ -171,18 +171,18 @@
   opacity: 0.6;
 }
 /* Left-Down */
-.Checkout-coupon-Button{
+.Checkout-coupon-Button {
   margin-bottom: 20px;
 }
-.Checkout-coupon-Button:hover{
+.Checkout-coupon-Button:hover {
   color: rgb(27, 180, 129);
 }
-.Checkout-coupon-Box{
+.Checkout-coupon-Box {
   width: 100%;
   display: flex;
   margin-top: -20px;
 }
-.Checkout-coupon-Button2{
+.Checkout-coupon-Button2 {
   width: 30%;
   margin-left: 15%;
   height: 48px;
@@ -198,25 +198,25 @@
   background-color: #fff;
   color: rgb(27, 180, 129);
 }
-.Checkout-Payment-Box{
+.Checkout-Payment-Box {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 30px;
 }
-.Checkout-Payment-Icon{
+.Checkout-Payment-Icon {
   font-size: 20px;
   color: rgb(27, 180, 129);
   margin-top: 10px;
 }
-.Checkout-Payment-Text{
+.Checkout-Payment-Text {
   font-size: 18px;
   margin-left: 20px;
-  opacity: .7;
+  opacity: 0.7;
   text-align: left;
 }
-.Checkout-Button{
+.Checkout-Button {
   width: 100%;
   height: 48px;
   background-color: rgb(27, 180, 129);
@@ -291,19 +291,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 1000px) {
   .Checkout-Left {
