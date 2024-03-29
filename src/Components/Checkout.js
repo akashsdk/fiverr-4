@@ -10,6 +10,7 @@ import {
   ArrowLeftOutlined,
   EyeOutlined,
   EyeInvisibleOutlined,
+  WalletOutlined,
 } from "@ant-design/icons";
 
 import countryOptions from "../Data/countries.json";
@@ -541,6 +542,24 @@ export default function Checkout() {
                 <button className="Checkout-coupon-Button2"> Apply</button>
               </div>
             )}
+
+            <div className="Checkout-Left-Box1">
+              <p className="Checkout-Left-Text1">Payment</p>
+            </div>
+            <div className="Checkout-Left-Line" />
+
+            <div className="Checkout-Payment-Box">
+              <WalletOutlined className="Checkout-Payment-Icon" />
+              <p className="Checkout-Payment-Text">
+                Sorry, it seems that there are no available payment methods.
+                Please contact us if you require assistance or wish to make
+                alternate arrangements.
+                <br/>
+                Only cash on delivery is available now.
+              </p>
+            </div>
+
+            <button className="Checkout-Button">Place Order</button>
           </div>
 
           <div className="Checkout-Right">
