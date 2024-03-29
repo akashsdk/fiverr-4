@@ -54,7 +54,7 @@ export default function Shop() {
                 setPage(1);
               }}
             >
-              <p className="Shop-Left-Text2">All Products</p>
+              <p className="Shop-Left-Text2">Product's</p>
               <p className="Shop-Left-Text3">[21]</p>
             </button>
 
@@ -114,7 +114,7 @@ export default function Shop() {
             <div style={{ width: "100%" }}>
               {page === 1 ? (
                 <div>
-                  <p className="Shop-Right-Text">All Products</p>
+                  <p className="Shop-Right-Text">Product's</p>
 
                   <div className="Shop-Right-Div">
                     <ProductsCart
