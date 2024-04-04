@@ -1,6 +1,5 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { FloatButton } from "antd";
 
 import Home from "./Screen/Home";
 import ErrorPage from "./Screen/ErrorPage";
@@ -28,7 +27,6 @@ function App() {
           <Route path="/Cart" element={<ShopCart />} />
           <Route path="/Checkout" element={<Checkout />} />
         </Routes>
-        <FloatButton.BackTop visibilityHeight={0} />
       </div>
     </BrowserRouter>
   );

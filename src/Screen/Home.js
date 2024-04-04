@@ -11,6 +11,9 @@ import BuyOnline from "../Components/BuyOnline";
 import Img from "../Img/pexels-oleksandr-tiupa-192136.jpg";
 import { Link } from "react-router-dom";
 
+import { FloatButton } from "antd";
+
+
 export default function Home() {
   return (
     <div className="Home-body">
