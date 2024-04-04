@@ -41,14 +41,21 @@
   border-radius: 5px;
 }
 .Home-Box2:hover {
-    background-color: transparent;
-    color: rgb(27, 180, 129);
+  background-color: transparent;
+  color: rgb(27, 180, 129);
 }
 .Home-Text3 {
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "Franklin Gothic Medium";
-  }
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium";
+}
+
+.custom-float-button:hover {
+  background-color: #fff; 
+  
+}
+
+
 @media only screen and (max-width: 1000px) {
   .Home-Text {
     font-size: 25px;
@@ -70,6 +77,6 @@
     width: 130px;
   }
   .Home-Text3 {
-      font-size: 20px;
-    }
+    font-size: 20px;
+  }
 }

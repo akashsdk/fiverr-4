@@ -1,4 +1,6 @@
-import React from "react";
+// Home.js
+
+import React, { useRef } from "react";
 import "./Home.css";
 
 import Header2 from "../Components/Header2";
@@ -10,15 +12,21 @@ import BuyOnline from "../Components/BuyOnline";
 
 import Img from "../Img/pexels-oleksandr-tiupa-192136.jpg";
 import { Link } from "react-router-dom";
-
 import { FloatButton } from "antd";
 
-
 export default function Home() {
+  const headerRef = useRef(null);
+
+  const scrollToHeader = () => {
+    headerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="Home-body">
       <div className="Home-Div">
-        <Header2 />
+        <div ref={headerRef}>
+          <Header2 />
+        </div>
         <div className="Home-Box">
           <p className="Home-Text">The Boutique Store For Plants!</p>
           <p className="Home-Text2">
@@ -36,6 +44,11 @@ export default function Home() {
         <BuyOnline />
         <Testimonials hide="hide" />
         <Footer />
+        <FloatButton.BackTop
+          visibilityHeight={0}
+          className="custom-float-button"
+          onClick={scrollToHeader}
+        />
       </div>
       <img className="Home-Img" alt="Home" src={Img} />
     </div>
