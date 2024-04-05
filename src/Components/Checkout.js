@@ -20,6 +20,7 @@ import countryOptions from "../Data/countries.json";
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   const handleGoBack = () => {
@@ -561,7 +562,9 @@ export default function Checkout() {
               </p>
             </div>
 
-            <button className="Checkout-Button">Place Order</button>
+            <Link to="/PlaceOrder" style={{width:'100%'}}>
+              <button className="Checkout-Button">Place Order</button>
+            </Link>
           </div>
 
           <div className="Checkout-Right">
