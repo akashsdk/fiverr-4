@@ -1,5 +1,3 @@
-// Home.js
-
 import React, { useRef } from "react";
 import "./Home.css";
 
@@ -12,13 +10,13 @@ import BuyOnline from "../Components/BuyOnline";
 
 import Img from "../Img/pexels-oleksandr-tiupa-192136.jpg";
 import { Link } from "react-router-dom";
-import { FloatButton } from "antd";
+import {ArrowUpOutlined} from '@ant-design/icons';
 
 export default function Home() {
   const headerRef = useRef(null);
 
   const scrollToHeader = () => {
-    headerRef.current?.scrollIntoView({ behavior: "smooth" });
+    headerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -44,13 +42,11 @@ export default function Home() {
         <BuyOnline />
         <Testimonials hide="hide" />
         <Footer />
-        <FloatButton.BackTop
-          visibilityHeight={0}
-          className="custom-float-button"
-          onClick={scrollToHeader}
-        />
       </div>
       <img className="Home-Img" alt="Home" src={Img} />
+      <button className="Home-BackTop-Button" onClick={scrollToHeader}>
+      <ArrowUpOutlined />
+      </button>
     </div>
   );
 }

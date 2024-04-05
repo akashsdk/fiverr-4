@@ -50,11 +50,18 @@
   font-family: "Franklin Gothic Medium";
 }
 
-.custom-float-button:hover {
-  background-color: #fff; 
-  
+.Home-BackTop-Button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #fff;
+  margin-top: -80px;
+  margin-left: 43%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  font-size: 25px;
 }
-
 
 @media only screen and (max-width: 1000px) {
   .Home-Text {
@@ -62,6 +69,9 @@
   }
   .Home-Text2 {
     font-size: 60px;
+  }
+  .Home-BackTop-Button {
+    margin-left: 40%;
   }
 }
 
@@ -78,5 +88,8 @@
   }
   .Home-Text3 {
     font-size: 20px;
+  }
+  .Home-BackTop-Button {
+    display: none;
   }
 }

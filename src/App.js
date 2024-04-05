@@ -9,6 +9,7 @@ import Shop from "./Screen/Shop";
 import Testimonials from "./Screen/Testimonials";
 import ShopCart from './Components/ShopCart';
 import Checkout from './Components/Checkout';
+import Try from "./Screen/Try";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Testimonials" element={<Testimonials />} />
           <Route path="/Cart" element={<ShopCart />} />
           <Route path="/Checkout" element={<Checkout />} />
+          <Route path="/Try" element={<Try />} />
         </Routes>
       </div>
     </BrowserRouter>
