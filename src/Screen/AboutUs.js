@@ -91,7 +91,7 @@ export default function AboutUs({ hide }) {
             <p className="AboutUs-Box-Text2">
               Each order includes a small care guide booklet.
             </p>
-            <Link className="AboutUs-Box-Link">
+            <Link to='/Shop' className="AboutUs-Box-Link">
               <p className="AboutUs-Box-Text3">Shop Now</p>
               <ArrowRightOutlined className="AboutUs-Box-Icon" />
             </Link>
@@ -102,7 +102,7 @@ export default function AboutUs({ hide }) {
             <p className="AboutUs-Box-Text2">
               Find the best plants hand-picked by our editor.
             </p>
-            <Link className="AboutUs-Box-Link">
+            <Link to='/Shop' className="AboutUs-Box-Link">
               <p className="AboutUs-Box-Text3">Shop Now</p>
               <ArrowRightOutlined className="AboutUs-Box-Icon" />
             </Link>
