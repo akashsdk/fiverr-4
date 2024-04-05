@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./ShopCart.css";
 import Header from "./Header";
 import Footer from "./Footer";
+
 import {
   DeleteOutlined,
   MinusOutlined,
   PlusOutlined,
   ArrowLeftOutlined,
 } from "@ant-design/icons";
+
+import {FloatButton} from 'antd';
+
 import Img1 from "../Img/Bonsai-1.jpeg";
 import Img2 from "../Img/Cactus1.jpeg";
 import Img3 from "../Img/Indoor1.jpeg";
@@ -212,6 +216,7 @@ export default function ShopCart() {
         </div>
       </div>
       <Footer />
+      <FloatButton.BackTop className='backTop' visibilityHeight={0} />
     </div>
   );
 }

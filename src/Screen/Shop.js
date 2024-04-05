@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Header from "../Components/Header";
 
-import { Button } from "antd";
+import { Button, FloatButton } from "antd";
 
 import ProductsCart from "../Cart/ProductsCart";
 
@@ -592,8 +592,8 @@ export default function Shop() {
           </div>
         </div>
       </div>
-
-      <Footer/>
+      <FloatButton.BackTop className="backTop" visibilityHeight={0} />
+      <Footer />
     </div>
   );
 }

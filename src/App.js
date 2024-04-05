@@ -1,14 +1,13 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { FloatButton } from "antd";
 
 import Home from "./Screen/Home";
 import ErrorPage from "./Screen/ErrorPage";
 import AboutUs from "./Screen/AboutUs";
 import Shop from "./Screen/Shop";
 import Testimonials from "./Screen/Testimonials";
-import ShopCart from './Components/ShopCart';
-import Checkout from './Components/Checkout';
+import ShopCart from "./Components/ShopCart";
+import Checkout from "./Components/Checkout";
 import Try from "./Screen/Try";
 
 function App() {

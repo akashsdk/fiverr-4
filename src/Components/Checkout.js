@@ -13,6 +13,8 @@ import {
   WalletOutlined,
 } from "@ant-design/icons";
 
+import { FloatButton } from "antd";
+
 import countryOptions from "../Data/countries.json";
 
 import Img1 from "../Img/Bonsai-1.jpeg";
@@ -554,7 +556,7 @@ export default function Checkout() {
                 Sorry, it seems that there are no available payment methods.
                 Please contact us if you require assistance or wish to make
                 alternate arrangements.
-                <br/>
+                <br />
                 Only cash on delivery is available now.
               </p>
             </div>
@@ -618,6 +620,7 @@ export default function Checkout() {
         </div>
       </div>
       <Footer />
+      <FloatButton.BackTop className="backTop" visibilityHeight={0} />
     </div>
   );
 }
