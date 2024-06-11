@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="Footer-Box3">
           <p className="Footer-Box-text1">Email:</p>
           <p className="Footer-Box-text2">info@greenery.com</p>
-        </div>gff
+        </div>g
       </div>
       <div className="Footer-div">
         <p className="Footer-Box-text5">
